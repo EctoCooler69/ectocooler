@@ -43,18 +43,18 @@ header {
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Move navigation links to the left */
     align-items: center;
     flex: 1; /* Allow nav to take up available space */
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Move the links to the left */
     align-items: center;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-left: 30px; /* Adjusted value to move the links more to the left */
     font-family: 'Press Start 2P', sans-serif;
     font-size: 14px;
 }
