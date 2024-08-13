@@ -31,14 +31,14 @@ header {
     text-shadow: 0 0 15px #00FF00;
     font-size: 2em;
     margin: 0;
-    padding-right: 3px; /* Move the logo even closer to the title */
+    padding-right: 0px; /* Move the logo even closer to the title */
     line-height: 1; /* Adjust line height to stack text */
 }
 
 #nav-logo {
     height: 7em;
     flex-shrink: 0; /* Prevent the logo from shrinking */
-    margin-left: -15px; /* Move the logo closer to the site title */
+    margin-left: -20px; /* Further move the logo closer to the site title */
 }
 
 /* Navigation Bar */
