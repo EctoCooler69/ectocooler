@@ -303,9 +303,7 @@ footer {
     text-shadow: 0 0 10px #00FF00;
 }
 
-#copied-notification.showIt seems the response got cut off again. Here is the continuation and completion of your CSS file with the mobile optimization:
-
-```css
+/* Hidden Element */
 .hidden {
     display: none;
 }
@@ -315,30 +313,39 @@ footer {
     header {
         flex-direction: column;
         align-items: center;
+        padding: 10px; /* Reduce padding for smaller screens */
     }
 
     #title-logo-container {
-        flex-direction: row; /* Stack logo and title side by side */
+        flex-direction: column; /* Stack logo and title vertically */
         align-items: center;
+        margin-bottom: 10px; /* Add spacing between title and navigation */
     }
 
     nav ul {
         flex-direction: column; /* Stack links vertically on mobile */
-        gap: 10px;
+        gap: 8px;
         justify-content: center;
-        font-size: 0.9em; /* Smaller font size for mobile */
+        font-size: 1.2em; /* Smaller font size for mobile */
+        padding: 0; /* Remove additional padding */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Reduce margin for smaller screens */
     }
 
     #terminal {
-        margin-top: 10px;
+        margin-top: 20px;
         text-align: center;
         right: 50%; /* Center the terminal on mobile */
         transform: translateX(50%); /* Ensure it remains centered */
+        width: 140px; /* Reduce width for mobile */
+        font-size: 10px; /* Smaller font size */
     }
 
     .hero h2 {
-        font-size: 1.5em; /* Smaller font size for mobile */
-        margin: 15px 0;
+        font-size: 1.8em; /* Smaller font size for mobile */
+        margin: 10px 0;
     }
 
     .hero p {
@@ -346,42 +353,37 @@ footer {
         margin: 10px 0;
     }
 
-    #mute-toggle {
-        margin-top: 15px;
-        font-size: 1em;
+    #enter-button {
+        font-size: 1.8em; /* Reduce font size for mobile */
+        padding: 8px 60px; /* Adjust padding */
     }
 }
 
 /* Further mobile optimizations */
 @media (max-width: 480px) {
     #site-title {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     nav ul {
-        font-size: 0.8em; /* Even smaller font size for very small screens */
-    }
-
-    #mute-toggle {
-        font-size: 0.8em;
+        font-size: 1em; /* Smaller font size for very small screens */
     }
 
     .hero h2 {
-        font-size: 1.2em; /* Smaller font size */
+        font-size: 1.5em; /* Smaller font size */
     }
 
     .hero p {
-        font-size: 0.8em;
+        font-size: 0.9em; /* Smaller font size */
     }
 
     #enter-button {
-        padding: 8px 60px; /* Adjust the padding for smaller screens */
-        font-size: 1.5em; /* Adjust the font size for smaller screens */
+        font-size: 1.5em; /* Reduce further for very small screens */
+        padding: 6px 50px; /* Adjust the padding for smaller screens */
     }
 
     #terminal {
-        width: 140px; /* Reduce the width slightly for smaller screens */
-        font-size: 10px; /* Adjust font size */
-        right: 10px; /* Ensure it's aligned to the right edge */
+        width: 120px; /* Reduce width slightly more for very small screens */
+        font-size: 8px; /* Adjust font size */
     }
 }
