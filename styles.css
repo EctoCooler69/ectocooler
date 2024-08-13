@@ -23,8 +23,7 @@ header {
 #title-logo-container {
     display: flex;
     align-items: center;
-    margin-right: 5px; /* Bring the title closer to the logo */
-    flex-grow: 1;
+    margin-right: 10px; /* Reduce space between title/logo and links */
 }
 
 #site-title {
@@ -36,13 +35,12 @@ header {
     line-height: 1;
     display: flex;
     align-items: center;
-    margin-right: 5px; /* Move closer to the logo */
 }
 
 #nav-logo {
     height: 9em; /* Keep logo size as adjusted */
     flex-shrink: 0;
-    margin-right: 5px; /* Move closer to the title */
+    margin-right: 10px; /* Move closer to the title */
 }
 
 /* Navigation Bar */
@@ -50,9 +48,7 @@ nav {
     display: flex;
     justify-content: flex-start; /* Align links to the left */
     align-items: center;
-    flex: 1;
-    flex-wrap: nowrap;
-    margin-left: 5px; /* Move links closer to the logo/title */
+    margin-left: 0px; /* Move links directly next to the logo/title */
 }
 
 nav ul {
@@ -65,7 +61,6 @@ nav ul {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 14px;
     gap: 10px; /* Reduce gap for closer spacing */
-    flex-wrap: nowrap;
 }
 
 nav ul li {
@@ -340,9 +335,6 @@ footer {
         margin: 5px 0;
     }
 
-    .hero h2Here's the continuation and completion of the mobile styles:
-
-```css
     .hero h2 {
         font-size: 1.8em;
         margin: 10px 0;
@@ -350,7 +342,9 @@ footer {
 
     .hero p {
         font-size: 1em;
-        margin: 10px 0;
+        margin: 10px 0Here’s the continuation and completion of the mobile styles:
+
+```css
     }
 
     #enter-button {
