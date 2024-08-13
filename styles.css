@@ -31,13 +31,14 @@ header {
     text-shadow: 0 0 15px #00FF00;
     font-size: 2em;
     margin: 0;
-    padding-right: 10px;
+    padding-right: 5px; /* Move the logo closer to the title */
     line-height: 1; /* Adjust line height to stack text */
 }
 
 #nav-logo {
     height: 7em;
     flex-shrink: 0; /* Prevent the logo from shrinking */
+    margin-left: -10px; /* Move the logo closer to the site title */
 }
 
 /* Navigation Bar */
@@ -54,7 +55,7 @@ nav ul {
     align-items: center;
     list-style-type: none;
     margin: 0;
-    padding-left: 30px; /* Adjusted value to move the links more to the left */
+    padding-left: 20px; /* Adjusted value to move the links more to the left */
     font-family: 'Press Start 2P', sans-serif;
     font-size: 14px;
 }
