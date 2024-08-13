@@ -27,19 +27,16 @@
             let audioElement = document.getElementById('background-audio');
             let muteToggle = document.getElementById('mute-toggle');
 
-            // Check if audio is already playing and its state
-            if (!sessionStorage.getItem('audioPlaying')) {
-                sessionStorage.setItem('audioPlaying', 'true');
-                audioElement.play();
-            } else {
-                audioElement.currentTime = sessionStorage.getItem('audioTime');
+            // Check if audio was playing previously
+            if (localStorage.getItem('audioPlaying') === 'true') {
+                audioElement.currentTime = localStorage.getItem('audioTime') || 0;
                 audioElement.play();
             }
 
-            // Save the current time of the audio before leaving the page
-            window.addEventListener('beforeunload', function() {
-                sessionStorage.setItem('audioTime', audioElement.currentTime);
-            });
+            // Update audio time in localStorage periodically
+            setInterval(function() {
+                localStorage.setItem('audioTime', audioElement.currentTime);
+            }, 1000);
 
             // Toggle mute/unmute
             muteToggle.addEventListener('click', function() {
@@ -55,6 +52,7 @@
             // Redirect to homepage
             document.getElementById('enter-button').addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent default link behavior
+                localStorage.setItem('audioPlaying', 'true');
                 window.location.href = "home.html"; // Redirect to the main site
             });
         });
