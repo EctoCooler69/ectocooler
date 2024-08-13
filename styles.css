@@ -24,6 +24,7 @@ header {
     display: flex;
     align-items: center;
     flex-shrink: 0; /* Prevent the logo container from shrinking */
+    margin-left: -10px; /* Shift title and logo slightly to the left */
 }
 
 #site-title {
@@ -111,6 +112,7 @@ nav ul li a:hover::after {
     height: auto;
     text-align: right;
     flex-shrink: 0; /* Prevent the terminal from shrinking */
+    margin-left: -10px; /* Shift the terminal module slightly to the left */
 }
 
 #live-quotes p {
@@ -296,44 +298,41 @@ footer {
 
 /* Copied Notification Styles */
 #copied-notification {
-    display: none;
-    color: #00FF00;
-    font-size: 1em;
-    margin-left: 10px;
-    text-shadow: 0 0 10px #00FF00;
-}
-
-#copied-notification.showIt seems the response got cut off again. Here is the continuation and completion of your CSS file with the mobile optimization:
+    display: noneIt seems like the CSS update was cut off, so here’s the final section of the CSS code including the mobile optimizations you requested:
 
 ```css
-.hidden {
-    display: none;
+#copied-notification.show {
+    display: inline;
 }
 
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; /* Align content to the left */
+        padding-left: 10px; /* Add some padding to the left */
     }
 
     #title-logo-container {
-        flex-direction: row; /* Stack logo and title side by side */
-        align-items: center;
+        flex-direction: row;
+        margin-left: -5px; /* Adjust margin for better alignment */
     }
 
     nav ul {
         flex-direction: column; /* Stack links vertically on mobile */
-        gap: 10px;
-        justify-content: center;
+        gap: 5px; /* Adjusted gap for better spacing */
+        justify-content: flex-start; /* Align navigation links to the left */
         font-size: 0.9em; /* Smaller font size for mobile */
+        padding-left: 0; /* Align the links with the title/logo */
     }
 
     #terminal {
-        margin-top: 10px;
+        position: static; /* Remove absolute positioning for mobile */
+        width: 100%;
         text-align: center;
-        right: 50%; /* Center the terminal on mobile */
-        transform: translateX(50%); /* Ensure it remains centered */
+        margin-top: 10px;
+        padding: 5px 0; /* Adjust padding for better fit */
+        box-sizing: border-box;
     }
 
     .hero h2 {
@@ -360,6 +359,7 @@ footer {
 
     nav ul {
         font-size: 0.8em; /* Even smaller font size for very small screens */
+        padding-left: 0; /* Align links with the title/logo */
     }
 
     #mute-toggle {
@@ -377,11 +377,5 @@ footer {
     #enter-button {
         padding: 8px 60px; /* Adjust the padding for smaller screens */
         font-size: 1.5em; /* Adjust the font size for smaller screens */
-    }
-
-    #terminal {
-        width: 140px; /* Reduce the width slightly for smaller screens */
-        font-size: 10px; /* Adjust font size */
-        right: 10px; /* Ensure it's aligned to the right edge */
     }
 }
