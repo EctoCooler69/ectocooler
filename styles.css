@@ -15,7 +15,7 @@ header {
     padding: 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align everything to the left */
+    justify-content: space-between; /* Space between the link array and the module */
     position: relative;
     flex-wrap: nowrap;
 }
@@ -23,7 +23,7 @@ header {
 #title-logo-container {
     display: flex;
     align-items: center;
-    margin-right: 20px; /* Space between logo/title and links */
+    margin-right: 0px; /* Removed extra space */
 }
 
 #site-title {
@@ -49,7 +49,7 @@ nav {
     display: flex;
     justify-content: flex-start; /* Align links to the left, directly next to the logo */
     align-items: center;
-    margin-left: 0px; /* Remove extra space */
+    flex-grow: 1; /* Allow nav to take up available space */
 }
 
 nav ul {
@@ -95,8 +95,6 @@ nav ul li a:hover::after {
 
 /* Terminal Module Styles */
 #terminal {
-    position: relative;
-    right: 0;
     text-align: right;
     width: 130px;
     height: auto;
