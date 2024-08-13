@@ -22,6 +22,7 @@ header {
 #title-logo-container {
     display: flex;
     align-items: center;
+    flex-shrink: 0; /* Prevent the logo container from shrinking */
 }
 
 #site-title {
@@ -36,13 +37,15 @@ header {
 
 #nav-logo {
     height: 7em;
+    flex-shrink: 0; /* Prevent the logo from shrinking */
 }
 
-/* Container for Navigation Links */
+/* Navigation Bar */
 nav {
     display: flex;
-    justify-content: center; /* Center the navigation links */
-    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Allow nav to take up available space */
 }
 
 nav ul {
@@ -50,11 +53,10 @@ nav ul {
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    margin: 0 auto; /* Center within the available space */
+    margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', sans-serif;
     font-size: 14px;
-    position: relative;
 }
 
 nav ul li {
@@ -103,6 +105,7 @@ nav ul li a:hover::after {
     width: 160px;  /* Increased width for more rectangular shape */
     height: auto;
     text-align: right;
+    flex-shrink: 0; /* Prevent the terminal from shrinking */
 }
 
 #live-quotes p {
