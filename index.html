@@ -8,8 +8,33 @@
 </head>
 <body>
     <div id="splash-screen">
+        <audio id="background-audio" autoplay loop>
+            <source src="audio/your-audio-file.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
         <img src="ectomeme.gif" id="splash-gif" alt="Splash GIF">
         <a href="home.html" id="enter-button">Enter</a>
     </div>
+
+    <!-- JavaScript to Handle Audio Continuity -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let audioElement = document.getElementById('background-audio');
+
+            // Check if audio already exists in localStorage
+            if (!localStorage.getItem('audioPlaying')) {
+                localStorage.setItem('audioPlaying', 'true');
+                audioElement.play();
+            } else {
+                audioElement.pause();
+            }
+
+            // Keep the audio playing as user clicks to enter
+            document.getElementById('enter-button').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                window.location.href = "home.html"; // Redirect to the main site
+            });
+        });
+    </script>
 </body>
 </html>
