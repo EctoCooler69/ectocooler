@@ -24,6 +24,7 @@ header {
     display: flex;
     align-items: center;
     margin-right: 15px;
+    flex-grow: 1;
 }
 
 #site-title {
@@ -38,7 +39,7 @@ header {
 }
 
 #nav-logo {
-    height: 2.5em; /* Increased height for the logo */
+    height: 3.5em; /* Increased height for the logo */
     flex-shrink: 0;
     margin-right: 10px;
 }
@@ -50,6 +51,7 @@ nav {
     align-items: center;
     flex: 1;
     flex-wrap: nowrap; /* No wrapping on desktop */
+    margin-right: auto;
 }
 
 nav ul {
@@ -96,11 +98,10 @@ nav ul li a:hover::after {
 
 /* Terminal Module Styles */
 #terminal {
-    position: absolute; /* Keep module on the far right */
-    top: 10px;
-    right: 10px;
+    position: relative; /* Absolute positioning for better control */
+    right: 0;
     text-align: right;
-    width: 170px;
+    width: 180px; /* Slightly increased width for balance */
     padding: 10px;
     background-color: #000;
     border: 2px solid #39FF14;
@@ -117,7 +118,7 @@ nav ul li a:hover::after {
     background-image: url('ectomeme3.gif');
     background-size: cover;
     background-position: center;
-    height: calc(100vh + 20px);
+    height: calc(100vh + 20px); 
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -333,13 +334,13 @@ footer {
     }
 
     nav ul li {
+        margin: 5It appears the response was again cut off. Here’s the continuation and the final section of the CSS file:
+
+```css
+    nav ul li {
         margin: 5px 0;
     }
 
-    .hero h2 {
-        font-size: 1.8It seems the response got cut off. Here’s the continuation and completion of your CSS file:
-
-```css
     .hero h2 {
         font-size: 1.8em;
         margin: 10px 0;
