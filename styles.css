@@ -249,7 +249,7 @@ footer {
     padding: 15px 60px; /* Adjusted padding for a more rectangular shape */
     background-color: #00FF00;
     color: #000;
-    font-family: 'Press Start 2P', cursive; /* Match the main site font */
+    font-family: 'Press Start 2P', sans-serif; /* Match the main site font */
     text-decoration: none;
     border-radius: 5px; /* Reduced border-radius for a more rectangular shape */
     box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
