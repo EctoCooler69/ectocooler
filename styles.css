@@ -12,7 +12,7 @@ body, html {
 /* Header and Navigation Styles */
 header {
     background-color: #111;
-    padding: 10px 10px; 
+    padding: 10px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,15 +31,16 @@ header {
     font-family: 'Press Start 2P', cursive;
     color: #00FF00;
     text-shadow: 0 0 15px #00FF00;
-    font-size: 2.5em; /* Keep the title size */
+    font-size: 2.5em;
     margin: 0;
     line-height: 1;
     display: flex;
     align-items: center;
+    margin-right: 10px; /* Move closer to the logo */
 }
 
 #nav-logo {
-    height: 9em; /* 50% increase in logo size */
+    height: 9em; /* Keep logo size as adjusted */
     flex-shrink: 0;
     margin-right: 10px;
 }
@@ -47,28 +48,28 @@ header {
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: flex-start; /* Move navigation links to the left */
+    justify-content: flex-start; /* Align links to the left */
     align-items: center;
     flex: 1;
-    flex-wrap: nowrap; 
-    margin-left: -30px; /* Shift links 5 spaces to the left */
+    flex-wrap: nowrap;
+    margin-left: -50px; /* Move links further to the left */
 }
 
 nav ul {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 14px; 
-    gap: 12px; /* Decreased gap for spacing */
-    flex-wrap: nowrap; 
+    font-size: 14px;
+    gap: 20px; /* Increase gap slightly for better spacing */
+    flex-wrap: nowrap;
 }
 
 nav ul li {
-    margin: 0 12px; /* Adjusted margin */
+    margin: 0 15px; /* Adjusted margin */
 }
 
 nav ul li a {
@@ -98,20 +99,21 @@ nav ul li a:hover::after {
 
 /* Terminal Module Styles */
 #terminal {
-    position: relative; 
+    position: relative;
     right: 0;
     text-align: right;
-    width: 130px; 
+    width: 130px;
     height: auto;
-    padding: 6px; 
+    padding: 6px;
     background-color: #000;
     border: 2px solid #39FF14;
-    border-radius: 5px; 
+    border-radius: 5px;
     box-shadow: 0px 0px 15px #39FF14;
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 10px; 
+    font-size: 10px;
     line-height: 1.2;
     color: #39FF14;
+    margin-left: auto; /* Ensure it stays to the far right */
 }
 
 /* Hero Section Styles */
@@ -119,7 +121,7 @@ nav ul li a:hover::after {
     background-image: url('ectomeme3.gif');
     background-size: cover;
     background-position: center;
-    height: calc(100vh + 20px); 
+    height: calc(100vh + 20px);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -194,7 +196,7 @@ section a:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px; 
+    padding: 20px;
 }
 
 .gallery-grid img {
@@ -202,7 +204,7 @@ section a:hover::after {
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    border: 2px solid #00FF00; 
+    border: 2px solid #00FF00;
 }
 
 .gallery-grid img:hover {
@@ -238,19 +240,19 @@ footer {
 
 #enter-button {
     position: absolute;
-    padding: 10px 80px; 
+    padding: 10px 80px;
     background-color: #00FF00;
     color: #000;
-    font-family: 'Press Start 2P', cursive; 
+    font-family: 'Press Start 2P', cursive;
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
-    font-size: 2.5em; 
+    font-size: 2.5em;
     text-align: center;
     transition: opacity 2s ease, all 0.3s ease;
     opacity: 0;
     animation: fadeIn 2s forwards;
-    bottom: 25%; 
+    bottom: 25%;
 }
 
 #enter-button:hover {
@@ -263,11 +265,11 @@ footer {
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        bottom: 0%; 
+        bottom: 0%;
     }
     100% {
         opacity: 1;
-        bottom: 25%; 
+        bottom: 25%;
     }
 }
 
@@ -306,13 +308,13 @@ footer {
     }
 
     #title-logo-container {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         margin-bottom: 15px;
     }
 
     #nav-logo {
-        margin-right: 0; 
+        margin-right: 0;
         margin-bottom: 10px;
         height: 2em;
     }
@@ -328,21 +330,20 @@ footer {
         flex-direction: column;
         gap: 10px;
         justify-content: center;
-        font-size: 1.2em; 
+        font-size: 1.2em;
         padding: 0;
         margin-top: 20px;
         text-align: center;
     }
 
     nav ul li {
+        margin:Here is the continuation and completion of the mobile styles:
+
+```css
+    nav ul li {
         margin: 5px 0;
     }
 
-    .hero h2 {
-        font-size: 1.8em;
-        margin: 10px 0Here’s the completion of the mobile styles:
-
-```css
     .hero h2 {
         font-size: 1.8em;
         margin: 10px 0;
