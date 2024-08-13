@@ -226,6 +226,7 @@ footer {
 }
 
 /* Splash Screen Styles */
+/* Splash Screen Styles */
 #splash-screen {
     position: relative;
     width: 100%;
@@ -245,12 +246,12 @@ footer {
 
 #enter-button {
     position: absolute;
-    padding: 20px 40px;
+    padding: 15px 60px; /* Adjusted padding for a more rectangular shape */
     background-color: #00FF00;
     color: #000;
-    font-family: 'Press Start 2P', cursive; /* Ensure this matches */
+    font-family: 'Press Start 2P', cursive; /* Match the main site font */
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 5px; /* Reduced border-radius for a more rectangular shape */
     box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
     font-size: 1.2em;
     text-align: center;
@@ -260,6 +261,13 @@ footer {
     bottom: 15%; /* Adjust the bottom position */
 }
 
+#enter-button:hover {
+    background-color: #000;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+}
+
+/* Animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -269,12 +277,6 @@ footer {
         opacity: 1;
         bottom: 15%; /* Position it slightly lower */
     }
-}
-
-#enter-button:hover {
-    background-color: #000;
-    color: #00FF00;
-    border: 2px solid #00FF00;
 }
 
 /* Contract Copy Glow Effect */
