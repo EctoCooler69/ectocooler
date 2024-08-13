@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon Link -->
 </head>
 <body>
- <!-- Main Content -->
+    <!-- Main Content -->
     <header>
         <div id="title-logo-container">
             <h1 id="site-title">Ecto<br>Cooler</h1>
@@ -71,19 +71,46 @@
         <p>© 2024 Ecto Cooler. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for Contract Address Copy -->
+    <!-- JavaScript for Audio Continuity and Contract Address Copy -->
     <script>
-        const contractAddress = document.getElementById('contract-address');
-        const copiedNotification = document.getElementById('copied-notification');
+        document.addEventListener("DOMContentLoaded", function() {
+            let audioElement = document.createElement('audio');
+            audioElement.id = 'background-audio';
+            audioElement.autoplay = true;
+            audioElement.loop = true;
+            audioElement.innerHTML = '<source src="audio/gbinstr.mp3" type="audio/mpeg">';
 
-        contractAddress.addEventListener('click', () => {
-            navigator.clipboard.writeText(contractAddress.textContent)
-                .then(() => {
-                    copiedNotification.classList.add('show');
-                    setTimeout(() => {
-                        copiedNotification.classList.remove('show');
-                    }, 2000);
-                });
+            // Append audio element to body
+            document.body.appendChild(audioElement);
+
+            // Restore audio time and play if it was playing
+            if (localStorage.getItem('audioPlaying') === 'true') {
+                audioElement.currentTime = localStorage.getItem('audioTime') || 0;
+                audioElement.play();
+            }
+
+            // Update audio time in localStorage periodically
+            setInterval(function() {
+                localStorage.setItem('audioTime', audioElement.currentTime);
+            }, 1000);
+
+            // Save the playing state before leaving
+            window.addEventListener('beforeunload', function() {
+                localStorage.setItem('audioPlaying', 'true');
+            });
+
+            const contractAddress = document.getElementById('contract-address');
+            const copiedNotification = document.getElementById('copied-notification');
+
+            contractAddress.addEventListener('click', () => {
+                navigator.clipboard.writeText(contractAddress.textContent)
+                    .then(() => {
+                        copiedNotification.classList.add('show');
+                        setTimeout(() => {
+                            copiedNotification.classList.remove('show');
+                        }, 2000);
+                    });
+            });
         });
     </script>
 </body>
