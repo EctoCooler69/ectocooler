@@ -155,18 +155,21 @@ section h2 {
     color: #00FF00;
     text-shadow: 0 0 10px #00FF00;
     margin-bottom: 30px;
+    font-size: 3.5em; /* Increased font size */
 }
 
 section p {
     color: #FFF;
-    font-size: 1.2em;
+    font-size: 2em; /* Increased font size */
     text-shadow: 0 0 10px #FFF;
+    line-height: 1.5; /* Adjusted line height to maintain readability */
 }
 
 section a {
     color: #00FF00;
     text-decoration: none;
     position: relative;
+    font-size: 2em; /* Increased font size for links */
 }
 
 section a::after {
