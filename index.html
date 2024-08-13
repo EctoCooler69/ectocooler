@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon Link -->
+    <style>
+        /* Style for Mute Button */
+        #mute-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            border: 2px solid #00FF00;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #00FF00;
+            cursor: pointer;
+            font-size: 20px;
+            color: #00FF00;
+            background-color: #000;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Splash Screen -->
@@ -16,6 +33,7 @@
             Your browser does not support the audio element.
         </audio>
         <img id="splash-gif" src="ectomeme.gif" alt="Splash Screen">
+        <div id="mute-toggle">🔊</div>
         <a href="#" id="enter-button">SMASH</a>
     </div>
 
@@ -83,32 +101,36 @@
         </footer>
     </div>
 
-    <!-- JavaScript for Splash Screen Transition and Real-Time Prices -->
+    <!-- JavaScript for Splash Screen Transition, Mute Button, and Real-Time Prices -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let audioElement = document.getElementById('background-audio');
+            let muteToggle = document.getElementById('mute-toggle');
+
+            // Check if audio was muted previously
+            if (localStorage.getItem('isMuted') === 'true') {
+                audioElement.muted = true;
+                muteToggle.innerText = '🔇';
+            }
+
+            // Toggle mute/unmute
+            muteToggle.addEventListener('click', function() {
+                if (audioElement.muted) {
+                    audioElement.muted = false;
+                    muteToggle.innerText = '🔊';
+                    localStorage.setItem('isMuted', 'false');
+                } else {
+                    audioElement.muted = true;
+                    muteToggle.innerText = '🔇';
+                    localStorage.setItem('isMuted', 'true');
+                }
+            });
 
             // Handle "Enter" button click to transition from splash to main content
             document.getElementById('enter-button').addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent default link behavior
                 document.getElementById('splash-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
-            });
-
-            // Restore audio time and play if it was playing
-            if (localStorage.getItem('audioPlaying') === 'true') {
-                audioElement.currentTime = localStorage.getItem('audioTime') || 0;
-                audioElement.play();
-            }
-
-            // Update audio time in localStorage periodically
-            setInterval(function() {
-                localStorage.setItem('audioTime', audioElement.currentTime);
-            }, 1000);
-
-            // Save the playing state before leaving
-            window.addEventListener('beforeunload', function() {
-                localStorage.setItem('audioPlaying', 'true');
             });
 
             // Fetch prices from CoinGecko API
