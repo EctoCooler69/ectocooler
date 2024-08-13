@@ -3,22 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splash Screen - Ecto Cooler</title>
+    <title>Ecto Cooler - Splash</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Splash Screen -->
     <div id="splash-screen">
         <audio id="background-audio" autoplay loop>
-            <source src="audio/gbinstr.mp3" type="audio/mpeg">
+            <source src="audio/your-audio-file.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
-        <img id="splash-gif" src="ectomeme.gif" alt="Splash Screen">
-        <a href="home.html" id="enter-button">SMASH</a>
+        <img src="ectomeme.gif" id="splash-gif" alt="Splash GIF">
+        <a href="#" id="enter-button">Enter</a>
     </div>
 
-    <!-- JavaScript to Handle Audio Continuity -->
+    <!-- Hidden Homepage Content -->
+    <div id="homepage-content" style="display: none;">
+        <header>
+            <div id="title-logo-container">
+                <h1 id="site-title">Ecto<br>Cooler</h1>
+                <img src="ectobacktrans.png" alt="Ecto Logo" id="nav-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">$ECTO</a></li>
+                    <li><a href="#">Memes</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+                <div id="terminal">
+                    <div id="live-quotes">
+                        <p>BTC <span>$59,102</span></p>
+                        <p>SOL <span>$146.08</span></p>
+                        <p>ECTO <span>$N/A</span></p>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h2>NEON GREEN AURA</h2>
+                <p>CA: <span id="contract-address">N/A</span></p>
+                <span id="copied-notification" class="hidden">Copied!</span>
+            </div>
+        </div>
+
+        <!-- Main Sections -->
+        <section>
+            <h2>Ecto Cooler Technology Stack</h2>
+            <p>Ecto Cooler is FUCKING RAD! It's like the ultimate juicebox that zaps you back to Saturday morning cartoons and playing N64 with the boys. The citrusy tropical taste is out of this world, and through months of rigorous scientific experimentation we’ve cryptographically programmed this unique Culture token to infuse Ecto Cooler's NEON GREEN AURA into every weekly candle.</p>
+        </section>
+
+        <section>
+            <h2>$ECTO Token</h2>
+            <p>100b Total Supply, Fairly launched on <a href="https://pump.fun" target="_blank">pump.fun</a> 💊</p>
+        </section>
+
+        <!-- Meme Gallery -->
+        <section class="gallery">
+            <h2>Memes</h2>
+            <div class="gallery-grid">
+                <img src="images/ectomeme1.png" alt="Meme 1">
+                <img src="images/ectomeme2.png" alt="Meme 2">
+                <img src="images/ectomeme3.png" alt="Meme 3">
+                <img src="images/ectomeme4.gif" alt="Meme 4">
+                <img src="images/ectomeme5.gif" alt="Meme 5">
+                <img src="images/ectomeme6.gif" alt="Meme 6">
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 Ecto Cooler. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript to Handle Audio Continuity and Content Swap -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let audioElement = document.getElementById('background-audio');
@@ -31,11 +94,11 @@
                 audioElement.pause();
             }
 
-            // Keep the audio playing as user clicks to enter
+            // Swap content when "Enter" is clicked
             document.getElementById('enter-button').addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent default link behavior
-                audioElement.pause(); // Pause the audio to prevent double playing
-                window.location.href = "home.html"; // Redirect to the main site
+                document.getElementById('splash-screen').style.display = 'none';
+                document.getElementById('homepage-content').style.display = 'block';
             });
         });
     </script>
