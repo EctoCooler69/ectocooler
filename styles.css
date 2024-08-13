@@ -230,18 +230,19 @@ footer {
 
 #enter-button {
     position: absolute;
-    padding: 15px 30px;
+    padding: 20px 40px; /* Increase padding to make the button more rectangular */
     background-color: #00FF00;
     color: #000;
     font-family: 'Press Start 2P', cursive;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
     font-size: 1.2em;
     text-align: center;
-    transition: opacity 2s ease, all 0.3s ease; /* Fade in over 2 seconds */
-    opacity: 0; /* Initially invisible */
-    animation: fadeIn 2s forwards; /* Triggers the fade-in animation */
+    transition: opacity 2s ease, all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    bottom: 15%; /* Adjust the bottom position */
 }
 
 @keyframes fadeIn {
@@ -251,7 +252,7 @@ footer {
     }
     100% {
         opacity: 1;
-        bottom: 50%;
+        bottom: 15%; /* Position it slightly lower */
     }
 }
 
