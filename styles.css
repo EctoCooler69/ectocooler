@@ -23,7 +23,7 @@ header {
 #title-logo-container {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 5px; /* Bring the title closer to the logo */
     flex-grow: 1;
 }
 
@@ -42,7 +42,7 @@ header {
 #nav-logo {
     height: 9em; /* Keep logo size as adjusted */
     flex-shrink: 0;
-    margin-right: 10px;
+    margin-right: 5px; /* Move closer to the title */
 }
 
 /* Navigation Bar */
@@ -52,7 +52,7 @@ nav {
     align-items: center;
     flex: 1;
     flex-wrap: nowrap;
-    margin-left: -40px; /* Move links further to the left */
+    margin-left: 5px; /* Move links closer to the logo/title */
 }
 
 nav ul {
@@ -340,16 +340,14 @@ footer {
         margin: 5px 0;
     }
 
+    .hero h2Here's the continuation and completion of the mobile styles:
+
+```css
     .hero h2 {
         font-size: 1.8em;
         margin: 10px 0;
     }
 
-    .hero p {
-        font-size: 1em;
-        margin:Here's the continuation and completion of the mobile styles:
-
-```css
     .hero p {
         font-size: 1em;
         margin: 10px 0;
