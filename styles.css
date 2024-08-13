@@ -34,12 +34,14 @@ header {
     font-size: 2.1em; /* Slightly increased font size for better proportion */
     margin: 0;
     line-height: 1; /* Adjust line height to stack text */
+    display: flex;
+    align-items: center;
 }
 
 #nav-logo {
-    height: 7em;
+    height: 1.5em; /* Adjusted height to better align with title */
     flex-shrink: 0; /* Prevent the logo from shrinking */
-    margin-left: -10px; /* Slightly reduced margin for better balance */
+    margin-right: 10px; /* Ensure space between logo and title */
 }
 
 /* Navigation Bar */
@@ -59,20 +61,21 @@ nav ul {
     margin: 0;
     padding-left: 10px; /* Further move the links to the left */
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 14px;
-    gap: 10px; /* Adjusted gap for better spacing */
+    font-size: 12px; /* Reduced font size to match module */
+    gap: 8px; /* Adjusted gap for better spacing */
     flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    text-align: center;
 }
 
 nav ul li {
-    margin: 0 10px; /* Reduced margin for smaller screens */
+    margin: 0 8px; /* Reduced margin for smaller screens */
 }
 
 nav ul li a {
     color: #FFFFFF;
     text-decoration: none;
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.4em;
+    font-size: 1.2em; /* Adjusted font size */
     text-shadow: 0 0 5px #FFFFFF;
     position: relative;
 }
@@ -302,9 +305,13 @@ footer {
     }
 
     #title-logo-container {
-        flex-direction: column;
+        flex-direction: row; /* Align logo and title on one line */
         align-items: center;
         margin-bottom: 15px;
+    }
+
+    #nav-logo {
+        margin-right: 10px; /* Ensure space between logo and title */
     }
 
     #terminal {
@@ -318,7 +325,7 @@ footer {
         flex-direction: column;
         gap: 10px;
         justify-content: center;
-        font-size: 1.4em;
+        font-size: 1.2em; /* Reduced font size to better match module */
         padding: 0;
         margin-top: 20px;
         text-align: center;
