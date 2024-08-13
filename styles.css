@@ -15,7 +15,7 @@ header {
     padding: 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between the title/logo and the module */
+    justify-content: flex-start; /* Align everything to the left */
     position: relative;
     flex-wrap: nowrap;
 }
@@ -47,9 +47,9 @@ header {
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: flex-start; /* Align links to the left */
+    justify-content: flex-start; /* Align links to the left, directly next to the logo */
     align-items: center;
-    margin-left: 0px; /* Move links directly next to the logo/title */
+    margin-left: 0px; /* Remove extra space */
 }
 
 nav ul {
@@ -328,52 +328,49 @@ footer {
         justify-content: center;
         font-size: 1.2em;
         padding: 0;
-        margin-top: 20Here’s the continuation of the mobile styles:
-
-```css
-    margin-top: 20px;
-    text-align: center;
-}
-
-nav ul li {
-    margin: 5px 0;
-}
-
-.hero h2 {
-    font-size: 1.8em;
-    margin: 10px 0;
-}
-
-.hero p {
-    font-size: 1em;
-    margin: 10px 0;
-}
-
-#enter-button {
-    font-size: 1.8em;
-    padding: 8px 60px;
-}
-
-/* Further mobile optimizations */
-@media (max-width: 480px) {
-    #site-title {
-        font-size: 1.5em;
+        margin-top: 20px;
     }
 
-    #terminal {
-        font-size: 8px;
+    nav ul li {
+        margin: 5px 0;
     }
 
     .hero h2 {
-        font-size: 1.5em;
+        font-size: 1.8em;
+        margin: 10px 0;
     }
 
     .hero p {
-        font-size: 0.9em;
+        font-size: 1em;
+        margin: 10px 0;
     }
 
     #enter-button {
-        font-size: 1.5em;
-        padding: 6px 50px;
+        font-size: 1.8em;
+        padding: 8px 60px;
+    }
+
+    /* Further mobile optimizations */
+    @media (max-width: 480px) {
+        #site-title {
+            font-size: 1.5em;
+        }
+
+        #terminal {
+            font-size: 8px;
+        }
+
+        .hero h2 {
+            font-size: 1.5em;
+        }
+
+        .hero p {
+            font-size: 0.9em;
+        }
+
+        #enter-button {
+            font-size: 1.5em;
+            padding: 6px 50px;
+        }
     }
 }
