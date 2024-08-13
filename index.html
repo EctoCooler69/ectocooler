@@ -1,190 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecto Cooler</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon Link -->
-    <style>
-        /* Style for Mute Button */
-        #mute-toggle {
-            padding: 10px;
-            border: 2px solid #00FF00;
-            border-radius: 5px;
-            box-shadow: 0 0 10px #00FF00;
-            cursor: pointer;
-            font-size: 20px;
-            color: #00FF00;
-            background-color: #000;
-            text-align: center;
-            margin-left: 20px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecto Cooler</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon Link -->
+  <style>
+    /* Reset default margins and paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Navigation Styling Adjustments */
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: #000;
+      color: #00FF00;
+    }
 
-        nav ul {
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        
-        #nav-left {
-            display: flex;
-            align-items: center;
-        }
-    </style>
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    #title-logo-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    #site-title {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    #nav-logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    nav {
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #00FF00;
+      padding: 5px 10px;
+      border: 2px solid #00FF00;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #00FF00;
+      color: #000;
+    }
+
+    #mute-toggle {
+      padding: 5px 10px;
+      border: 2px solid #00FF00;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #00FF00;
+      cursor: pointer;
+      font-size: 20px;
+      color: #00FF00;
+      background-color: #000;
+      text-align: center;
+      margin-left: 10px;
+      transition: background-color 0.3s;
+    }
+
+    #mute-toggle:hover {
+      background-color: #00FF00;
+      color: #000;
+    }
+
+    #terminal {
+      margin-top: 10px;
+    }
+
+    #live-quotes p {
+      margin: 5px 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+
+      #mute-toggle {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      #terminal {
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Main Content -->
-    <header>
-        <div id="title-logo-container">
-            <h1 id="site-title">Ecto<br>Cooler</h1>
-            <img src="ectobacktrans.png" alt="Ecto Logo" id="nav-logo">
-        </div>
-        <nav>
-            <div id="nav-left">
-                <ul>
-                    <li><a href="#">Tech</a></li>
-                    <li><a href="#Ecto Cooler Technology Stack">$ECTO</a></li>
-                    <li><a href="#Memes">Memes</a></li>
-                    <li><a href="#">Telegram</a></li>
-                    <li><a href="https://x.com/ectocoolerxyz">Twitter</a></li>
-                </ul>
-                <div id="mute-toggle">🔊</div>
-            </div>
-            <div id="terminal">
-                <div id="live-quotes">
-                    <p>BTC <span id="btc-price">$59,102</span></p>
-                    <p>SOL <span id="sol-price">$146.08</span></p>
-                    <p>ECTO <span id="ecto-price">$N/A</span></p>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-content">
-            <h2>NEON GREEN AURA!</h2>
-            <p>CA: <span id="contract-address">N/A</span></p>
-            <span id="copied-notification" class="hidden">Copied!</span>
-        </div>
+  <!-- Main Content -->
+  <header>
+    <div id="title-logo-container">
+      <h1 id="site-title">Ecto<br>Cooler</h1>
+      <img src="ectobacktrans.png" alt="Ecto Logo" id="nav-logo">
     </div>
-
-    <!-- Main Sections -->
-    <section>
-        <h2>Ecto Cooler Technology Stack</h2>
-        <p>Ecto Cooler is FUCKING RAD! It's like the ultimate juicebox that zaps you back to Saturday morning cartoons and playing N64 with the boys. The citrusy tropical taste is out of this world, and through months of rigorous scientific experimentation we’ve cryptographically programmed this unique Culture token to infuse Ecto Cooler's NEON GREEN AURA into every weekly candle.</p>
-    </section>
-
-    <section>
-        <h2>$ECTO Token</h2>
-        <p>100b Total Supply, Fairly launched on <a href="https://pump.fun" target="_blank">pump.fun</a> 💊</p>
-    </section>
-
-    <!-- Meme Gallery -->
-    <section class="gallery">
-        <h2>Memes</h2>
-        <div class="gallery-grid">
-            <img src="images/ectomeme1.png" alt="Meme 1">
-            <img src="images/ectomeme2.png" alt="Meme 2">
-            <img src="images/ectomeme3.png" alt="Meme 3">
-            <img src="images/ectomeme4.gif" alt="Meme 4">
-            <img src="images/ectomeme5.gif" alt="Meme 5">
-            <img src="images/ectomeme6.gif" alt="Meme 6">
+    <nav>
+      <div id="nav-left" style="display: flex; align-items: center; flex-wrap: wrap;">
+        <ul>
+          <li><a href="#">Tech</a></li>
+          <li><a href="#Ecto Cooler Technology Stack">$ECTO</a></li>
+          <li><a href="#Memes">Memes</a></li>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="https://x.com/ectocoolerxyz">Twitter</a></li>
+        </ul>
+        <div id="mute-toggle">🔊</div>
+      </div>
+      <div id="terminal">
+        <div id="live-quotes">
+          <p>BTC <span id="btc-price">$59,102</span></p>
+          <p>SOL <span id="sol-price">$146.08</span></p>
+          <p>ECTO <span id="ecto-price">$N/A</span></p>
         </div>
-    </section>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Ecto Cooler. All Rights Reserved.</p>
-    </footer>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h2>NEON GREEN AURA!</h2>
+      <p>CA: <span id="contract-address">N/A</span></p>
+      <span id="copied-notification" class="hidden">Copied!</span>
+    </div>
+  </div>
 
-    <!-- JavaScript for Mute Toggle and Real-Time Prices -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let audioElement = document.getElementById('background-audio');
-            let muteToggle = document.getElementById('mute-toggle');
+  <!-- Main Sections -->
+  <section>
+    <h2>Ecto Cooler Technology Stack</h2>
+    <p>Ecto Cooler is FUCKING RAD! It's like the ultimate juicebox that zaps you back to Saturday morning cartoons and playing N64 with the boys. The citrusy tropical taste is out of this world, and through months of rigorous scientific experimentation we’ve cryptographically programmed this unique Culture token to infuse Ecto Cooler's NEON GREEN AURA into every weekly candle.</p>
+  </section>
 
-            // Check if audio was muted previously
-            if (localStorage.getItem('isMuted') === 'true') {
-                audioElement.muted = true;
-                muteToggle.innerText = '🔇';
-            }
+  <section>
+    <h2>$ECTO Token</h2>
+    <p>100b Total Supply, Fairly launched on <a href="https://pump.fun" target="_blank">pump.fun</a> 💊</p>
+  </section>
 
-            // Toggle mute/unmute
-            muteToggle.addEventListener('click', function() {
-                if (audioElement.muted) {
-                    audioElement.muted = false;
-                    muteToggle.innerText = '🔊';
-                    localStorage.setItem('isMuted', 'false');
-                } else {
-                    audioElement.muted = true;
-                    muteToggle.innerText = '🔇';
-                    localStorage.setItem('isMuted', 'true');
-                }
-            });
+  <!-- Meme Gallery -->
+  <section class="gallery">
+    <h2>Memes</h2>
+    <div class="gallery-grid">
+      <img src="images/ectomeme1.png" alt="Meme 1">
+      <img src="images/ectomeme2.png" alt="Meme 2">
+      <img src="images/ectomeme3.png" alt="Meme 3">
+      <img src="images/ectomeme4.gif" alt="Meme 4">
+      <img src="images/ectomeme5.gif" alt="Meme 5">
+      <img src="images/ectomeme6.gif" alt="Meme 6">
+    </div>
+  </section>
 
-            // Handle "Enter" button click to transition from splash to main content
-            document.getElementById('enter-button').addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default link behavior
-                document.getElementById('splash-screen').style.display = 'none';
-                document.getElementById('main-content').style.display = 'block';
-            });
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Ecto Cooler. All Rights Reserved.</p>
+  </footer>
 
-            // Fetch prices from CoinGecko API
-            async function fetchPrices() {
-                const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,solana&vs_currencies=usd';
+  <!-- JavaScript for Mute Toggle and Real-Time Prices -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let audioElement = document.getElementById('background-audio');
+      let muteToggle = document.getElementById('mute-toggle');
 
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
+      // Check if audio was muted previously
+      if (localStorage.getItem('isMuted') === 'true') {
+        audioElement.muted = true;
+        muteToggle.innerText = '🔇';
+      }
 
-                    const data = await response.json();
+      // Toggle mute/unmute
+      muteToggle.addEventListener('click', function() {
+        if (audioElement.muted) {
+          audioElement.muted = false;
+          muteToggle.innerText = '🔊';
+          localStorage.setItem('isMuted', 'false');
+        } else {
+          audioElement.muted = true;
+          muteToggle.innerText = '🔇';
+          localStorage.setItem('isMuted', 'true');
+        }
+      });
 
-                    // Update the prices in the nav bar
-                    document.getElementById('btc-price').innerText = `$${data.bitcoin.usd.toLocaleString()}`;
-                    document.getElementById('sol-price').innerText = `$${data.solana.usd.toLocaleString()}`;
+      // Fetch prices from CoinGecko API
+      async function fetchPrices() {
+        const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,solana&vs_currencies=usd';
 
-                    // Assuming ECTO is part of your custom tokens; this won't work unless it exists in CoinGecko
-                    const ectoPrice = data.ecto ? `$${data.ecto.usd.toLocaleString()}` : '$N/A';
-                    document.getElementById('ecto-price').innerText = ectoPrice;
-                } catch (error) {
-                    console.error('Error fetching price data:', error);
-                }
-            }
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
 
-            // Call the fetchPrices function every minute
-            setInterval(fetchPrices, 60000);
+          const data = await response.json();
 
-            // Fetch prices on initial load
-            fetchPrices();
+          // Update the prices in the nav bar
+          document.getElementById('btc-price').innerText = `$${data.bitcoin.usd.toLocaleString()}`;
+          document.getElementById('sol-price').innerText = `$${data.solana.usd.toLocaleString()}`;
 
-            // Contract address copy functionality
-            const contractAddress = document.getElementById('contract-address');
-            const copiedNotification = document.getElementById('copied-notification');
+          // Assuming ECTO is part of your custom tokens; this won't work unless it exists in CoinGecko
+          const ectoPrice = data.ecto ? `$${data.ecto.usd.toLocaleString()}` : '$N/A';
+          document.getElementById('ecto-price').innerText = ectoPrice;
+        } catch (error) {
+          console.error('Error fetching price data:', error);
+        }
+      }
 
-            contractAddress.addEventListener('click', () => {
-                navigator.clipboard.writeText(contractAddress.textContent)
-                    .then(() => {
-                        copiedNotification.classList.add('show');
-                        setTimeout(() => {
-                            copiedNotification.classList.remove('show');
-                        }, 2000);
-                    });
-            });
-        });
-    </script>
+      // Call the fetchPrices function every minute
+      setInterval(fetchPrices, 60000);
+
+      // Fetch prices on initial load
+      fetchPrices();
+
+      // Contract address copy functionality
+      const contractAddress = document.getElementById('contract-address');
+      const copiedNotification = document.getElementById('copied-notification');
+
+      contractAddress.addEventListener('click', () => {
+        navigator.clipboard.writeText(contractAddress.textContent)
+          .then(() => {
+            copiedNotification.classList.add('show');
+            setTimeout(() => {
+              copiedNotification.classList.remove('show');
+            }, 2000);
+          });
+      });
+    });
+  </script>
 </body>
 </html>
