@@ -248,11 +248,11 @@ footer {
     padding: 10px 80px; /* Thinner, more rectangular shape */
     background-color: #00FF00;
     color: #000;
-    font-family: 'VT323', monospace; /* 1980s computer/hacking retro font */
+    font-family: 'Press Start 2P', cursive; /* Pixelated video-game-like font */
     text-decoration: none;
     border-radius: 5px; /* Reduced border-radius for a rectangular shape */
     box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
-    font-size: 2em; /* Larger font size to fill the button */
+    font-size: 2.5em; /* Larger font size to fill the button more */
     text-align: center;
     transition: opacity 2s ease, all 0.3s ease;
     opacity: 0;
