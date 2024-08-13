@@ -71,6 +71,40 @@
         <p>© 2024 Ecto Cooler. All Rights Reserved.</p>
     </footer>
 
+<body>
+
+    <!-- JavaScript for Fetching Real-Time Prices -->
+    <script>
+        // Function to fetch prices from CoinGecko API
+        async function fetchPrices() {
+            const apiKey = 'CG-A8Mpro5NF7jxj4hWxoaHscrQ';
+            const url = `https://pro-api.coingecko.com/api/v3/simple/price?ids=bitcoin,solana&vs_currencies=usd&x_cg_pro_api_key=${apiKey}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                // Update the prices in the nav bar
+                document.getElementById('btc-price').innerText = `$${data.bitcoin.usd.toLocaleString()}`;
+                document.getElementById('sol-price').innerText = `$${data.solana.usd.toLocaleString()}`;
+
+                // Update ECTO price if available
+                const ectoPrice = data.ecto ? `$${data.ecto.usd.toLocaleString()}` : '$N/A';
+                document.getElementById('ecto-price').innerText = ectoPrice;
+            } catch (error) {
+                console.error('Error fetching price data:', error);
+            }
+        }
+
+        // Call the fetchPrices function every minute
+        setInterval(fetchPrices, 60000);
+
+        // Fetch prices on initial load
+        fetchPrices();
+    </script>
+</body>
+
+
     <!-- JavaScript for Audio Continuity and Contract Address Copy -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
