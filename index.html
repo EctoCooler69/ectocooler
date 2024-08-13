@@ -3,50 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecto Cooler - Splash</title>
+    <title>Splash Screen - Ecto Cooler</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Splash Screen -->
     <div id="splash-screen">
-        <img src="ectomeme.gif" id="splash-gif" alt="Splash GIF">
-        <a href="home.html" id="enter-button">Enter</a>
+        <audio id="background-audio" autoplay loop>
+            <source src="audio/your-audio-file.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img id="splash-gif" src="images/your-splash-image.gif" alt="Splash Screen">
+        <a href="index.html" id="enter-button">Enter</a>
     </div>
 
-    <!-- JavaScript to Handle Audio Playback and Seamless Transition -->
+    <!-- JavaScript to Handle Audio Continuity -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let audioElement;
+            let audioElement = document.getElementById('background-audio');
 
-            // Check if the audio is already playing
-            if (sessionStorage.getItem('audioPlaying')) {
-                audioElement = document.getElementById(sessionStorage.getItem('audioElementId'));
+            // Check if audio already exists in localStorage
+            if (!localStorage.getItem('audioPlaying')) {
+                localStorage.setItem('audioPlaying', 'true');
+                audioElement.play();
             } else {
-                // Create and play the audio
-                audioElement = document.createElement('audio');
-                audioElement.src = "audio/gbinstr.mp3"; // Replace with your audio file path
-                audioElement.loop = true;
-                audioElement.id = "background-audio";
-                document.body.appendChild(audioElement);
-
-                audioElement.play().then(() => {
-                    console.log('Audio is playing');
-                }).catch((error) => {
-                    console.log('Autoplay failed. Will start playing on user interaction.');
-                    document.addEventListener('click', () => {
-                        audioElement.play();
-                    }, { once: true });
-                });
-
-                // Store in sessionStorage that the audio is playing
-                sessionStorage.setItem('audioPlaying', true);
-                sessionStorage.setItem('audioElementId', 'background-audio');
+                audioElement.pause();
             }
 
             // Keep the audio playing as user clicks to enter
             document.getElementById('enter-button').addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent default link behavior
-                sessionStorage.setItem('audioPlaying', true); // Persist audio state
-                window.location.href = "home.html"; // Redirect to the main site
+                audioElement.pause(); // Pause the audio to prevent double playing
+                window.location.href = "index.html"; // Redirect to the main site
             });
         });
     </script>
