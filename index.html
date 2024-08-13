@@ -14,8 +14,8 @@
             <source src="audio/gbinstr.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
-        <img id="splash-gif" src="images/your-splash-image.gif" alt="Splash Screen">
-        <a href="index.html" id="enter-button">Enter</a>
+        <img id="splash-gif" src="ectomeme.gif" alt="Splash Screen">
+        <a href="home.html" id="enter-button">Enter</a>
     </div>
 
     <!-- JavaScript to Handle Audio Continuity -->
@@ -35,7 +35,7 @@
             document.getElementById('enter-button').addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent default link behavior
                 audioElement.pause(); // Pause the audio to prevent double playing
-                window.location.href = "index.html"; // Redirect to the main site
+                window.location.href = "home.html"; // Redirect to the main site
             });
         });
     </script>
