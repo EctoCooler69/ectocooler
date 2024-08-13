@@ -38,14 +38,14 @@ header {
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-grow: 1;
-    margin-left: auto;
+    justify-content: flex-start; /* Aligns links to the left */
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 14px;
 }
 
 nav ul li {
@@ -88,12 +88,12 @@ nav ul li a:hover::after {
     border-radius: 10px;
     box-shadow: 0px 0px 15px #39FF14;
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 12px;  /* Adjusted size */
-    line-height: 1.5;  /* Added line height for spacing */
+    font-size: 12px;
+    line-height: 1.5;
     color: #39FF14;
-    width: 150px;  /* Adjusted width */
+    width: 160px;  /* Increased width for more rectangular shape */
     height: auto;
-    text-align: right; /* Aligning text to the right */
+    text-align: right;
 }
 
 #live-quotes p {
