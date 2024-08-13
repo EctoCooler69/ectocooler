@@ -230,10 +230,10 @@ footer {
 
 #enter-button {
     position: absolute;
-    padding: 20px 40px; /* Increase padding to make the button more rectangular */
+    padding: 20px 40px;
     background-color: #00FF00;
     color: #000;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', cursive; /* Ensure this matches */
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
