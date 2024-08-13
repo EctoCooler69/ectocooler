@@ -17,7 +17,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    flex-wrap: nowrap; /* Prevent wrapping so elements stay side by side */
 }
 
 #title-logo-container {
@@ -111,18 +111,6 @@ nav ul li a:hover::after {
     height: auto;
     text-align: right;
     flex-shrink: 0; /* Prevent the terminal from shrinking */
-}
-
-#live-quotes p {
-    margin: 5px 0;
-    display: flex;
-    justify-content: space-between; /* Ensure space between coin name and price */
-}
-
-#live-quotes p span {
-    flex: 1;
-    text-align: right; /* Align price to the right */
-    margin-left: 10px; /* Increase space between symbol and price */
 }
 
 /* Hero Section Styles */
@@ -311,51 +299,52 @@ footer {
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: row; /* Ensure row direction to align items side by side */
         align-items: center;
-        padding: 10px; /* Reduce padding for smaller screens */
+        justify-content: space-between; /* Space elements evenly */
+        padding: 10px;
     }
 
     #title-logo-container {
-        flex-direction: column; /* Stack logo and title vertically */
+        flex-direction: row; /* Align title and logo side by side */
         align-items: center;
-        margin-bottom: 10px; /* Add spacing between title and navigation */
+        flex-grow: 1; /* Allow this container to take up available space */
+    }
+
+    #terminal {
+        position: static; /* Remove absolute positioning for better flow */
+        margin-left: auto; /* Push the terminal to the right */
+        text-align: right;
+        width: auto; /* Allow the width to adjust naturally */
+        font-size: 10px;
     }
 
     nav ul {
         flex-direction: column; /* Stack links vertically on mobile */
         gap: 8px;
         justify-content: center;
-        font-size: 1.2em; /* Smaller font size for mobile */
-        padding: 0; /* Remove additional padding */
+        font-size: 1.2em;
+        padding: 0;
+        margin-top: 20px; /* Add margin to separate nav from the header content */
     }
 
     nav ul li {
-        margin: 5px 0; /* Reduce margin for smaller screens */
-    }
-
-    #terminal {
-        margin-top: 20px;
-        text-align: center;
-        right: 50%; /* Center the terminal on mobile */
-        transform: translateX(50%); /* Ensure it remains centered */
-        width: 140px; /* Reduce width for mobile */
-        font-size: 10px; /* Smaller font size */
+        margin: 5px 0;
     }
 
     .hero h2 {
-        font-size: 1.8em; /* Smaller font size for mobile */
+        font-size: 1.8em;
         margin: 10px 0;
     }
 
     .hero p {
-        font-size: 1em; /* Smaller font size for mobile */
+        font-size: 1em;
         margin: 10px 0;
     }
 
     #enter-button {
-        font-size: 1.8em; /* Reduce font size for mobile */
-        padding: 8px 60px; /* Adjust padding */
+        font-size: 1.8em;
+        padding: 8px 60px;
     }
 }
 
@@ -365,25 +354,20 @@ footer {
         font-size: 1.5em;
     }
 
-    nav ul {
-        font-size: 1em; /* Smaller font size for very small screens */
+    #terminal {
+        font-size: 8px;
     }
 
     .hero h2 {
-        font-size: 1.5em; /* Smaller font size */
+        font-size: 1.5em;
     }
 
     .hero p {
-        font-size: 0.9em; /* Smaller font size */
+        font-size: 0.9em;
     }
 
     #enter-button {
-        font-size: 1.5em; /* Reduce further for very small screens */
-        padding: 6px 50px; /* Adjust the padding for smaller screens */
-    }
-
-    #terminal {
-        width: 120px; /* Reduce width slightly more for very small screens */
-        font-size: 8px; /* Adjust font size */
+        font-size: 1.5em;
+        padding: 6px 50px;
     }
 }
