@@ -131,7 +131,7 @@ nav ul li a:hover::after {
     justify-content: center;
     align-items: flex-start; /* Move content to start higher up */
     text-align: center;
-    padding-top: 60px; /* Increased padding to move content higher within the hero */
+    padding-top: 50px; /* Adjusted padding to move content slightly lower */
     padding-bottom: 20px; /* Add padding at the bottom */
 }
 
