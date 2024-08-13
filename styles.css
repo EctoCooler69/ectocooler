@@ -15,7 +15,7 @@ header {
     padding: 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align everything to the left */
+    justify-content: space-between; /* Space between the title/logo and the module */
     position: relative;
     flex-wrap: nowrap;
 }
@@ -23,7 +23,7 @@ header {
 #title-logo-container {
     display: flex;
     align-items: center;
-    margin-right: 10px; /* Reduce space between title/logo and links */
+    margin-right: 20px; /* Space between logo/title and links */
 }
 
 #site-title {
@@ -35,12 +35,13 @@ header {
     line-height: 1;
     display: flex;
     align-items: center;
+    margin-right: 10px; /* Closer spacing between title and logo */
 }
 
 #nav-logo {
     height: 9em; /* Keep logo size as adjusted */
     flex-shrink: 0;
-    margin-right: 10px; /* Move closer to the title */
+    margin-right: 10px; /* Bring the logo closer to the title */
 }
 
 /* Navigation Bar */
@@ -327,30 +328,30 @@ footer {
         justify-content: center;
         font-size: 1.2em;
         padding: 0;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .hero h2 {
-        font-size: 1.8em;
-        margin: 10px 0;
-    }
-
-    .hero p {
-        font-size: 1em;
-        margin: 10px 0Here’s the continuation and completion of the mobile styles:
+        margin-top: 20Here’s the continuation of the mobile styles:
 
 ```css
-    }
+    margin-top: 20px;
+    text-align: center;
+}
 
-    #enter-button {
-        font-size: 1.8em;
-        padding: 8px 60px;
-    }
+nav ul li {
+    margin: 5px 0;
+}
+
+.hero h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+#enter-button {
+    font-size: 1.8em;
+    padding: 8px 60px;
 }
 
 /* Further mobile optimizations */
