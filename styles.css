@@ -226,7 +226,6 @@ footer {
 }
 
 /* Splash Screen Styles */
-/* Splash Screen Styles */
 #splash-screen {
     position: relative;
     width: 100%;
@@ -246,19 +245,19 @@ footer {
 
 #enter-button {
     position: absolute;
-    padding: 15px 60px; /* Adjusted padding for a more rectangular shape */
+    padding: 10px 80px; /* Thinner, more rectangular shape */
     background-color: #00FF00;
     color: #000;
-    font-family: 'Press Start 2P', sans-serif; /* Match the main site font */
+    font-family: 'VT323', monospace; /* 1980s computer/hacking retro font */
     text-decoration: none;
-    border-radius: 5px; /* Reduced border-radius for a more rectangular shape */
+    border-radius: 5px; /* Reduced border-radius for a rectangular shape */
     box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
-    font-size: 1.2em;
+    font-size: 2em; /* Larger font size to fill the button */
     text-align: center;
     transition: opacity 2s ease, all 0.3s ease;
     opacity: 0;
     animation: fadeIn 2s forwards;
-    bottom: 15%; /* Adjust the bottom position */
+    bottom: 25%; /* Move the button up higher */
 }
 
 #enter-button:hover {
@@ -271,11 +270,11 @@ footer {
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        bottom: -50px;
+        bottom: 0%; /* Start lower */
     }
     100% {
         opacity: 1;
-        bottom: 15%; /* Position it slightly lower */
+        bottom: 25%; /* Position it higher */
     }
 }
 
