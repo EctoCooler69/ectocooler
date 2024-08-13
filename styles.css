@@ -24,14 +24,14 @@ header {
     display: flex;
     align-items: center;
     flex-grow: 1; /* Allow this container to take up available space */
-    margin-right: 10px; /* Add space between title/logo and terminal */
+    margin-right: 15px; /* Increased space between title/logo and terminal */
 }
 
 #site-title {
     font-family: 'Press Start 2P', cursive;
     color: #00FF00;
     text-shadow: 0 0 15px #00FF00;
-    font-size: 2em;
+    font-size: 2.1em; /* Slightly increased font size for better proportion */
     margin: 0;
     line-height: 1; /* Adjust line height to stack text */
 }
@@ -98,7 +98,7 @@ nav ul li a:hover::after {
     position: static; /* Remove absolute positioning for better flow */
     text-align: right;
     flex-shrink: 0; /* Prevent the terminal from shrinking */
-    width: 160px; /* Fixed width for consistency */
+    width: 170px; /* Slightly increased width for balance */
     padding: 10px;
     background-color: #000;
     border: 2px solid #39FF14;
@@ -296,31 +296,32 @@ footer {
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     header {
-        flex-direction: row; /* Ensure row direction to align items side by side */
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between; /* Space elements evenly */
         padding: 10px;
     }
 
     #title-logo-container {
-        flex-direction: row; /* Align title and logo side by side */
+        flex-direction: column;
         align-items: center;
-        flex-grow: 1; /* Allow this container to take up available space */
-        margin-right: 10px; /* Space between title/logo and terminal */
+        margin-bottom: 15px;
     }
 
     #terminal {
-        width: auto; /* Allow the width to adjust naturally */
+        margin-top: 10px;
+        width: auto;
+        text-align: center;
         font-size: 10px;
     }
 
     nav ul {
-        flex-direction: column; /* Stack links vertically on mobile */
-        gap: 8px;
+        flex-direction: column;
+        gap: 10px;
         justify-content: center;
-        font-size: 1.2em;
+        font-size: 1.4em;
         padding: 0;
-        margin-top: 20px; /* Add margin to separate nav from the header content */
+        margin-top: 20px;
+        text-align: center;
     }
 
     nav ul li {
