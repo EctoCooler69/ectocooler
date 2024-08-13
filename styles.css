@@ -12,70 +12,68 @@ body, html {
 /* Header and Navigation Styles */
 header {
     background-color: #111;
-    padding: 10px 10px; /* Slightly reduced padding for better fit */
+    padding: 10px 10px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    flex-wrap: nowrap; /* Prevent wrapping so elements stay side by side */
+    flex-wrap: nowrap;
 }
 
 #title-logo-container {
     display: flex;
     align-items: center;
-    flex-grow: 1; /* Allow this container to take up available space */
-    margin-right: 15px; /* Increased space between title/logo and terminal */
+    margin-right: 15px;
 }
 
 #site-title {
     font-family: 'Press Start 2P', cursive;
     color: #00FF00;
     text-shadow: 0 0 15px #00FF00;
-    font-size: 2.1em; /* Slightly increased font size for better proportion */
+    font-size: 2.5em; /* Increased font size for desktop */
     margin: 0;
-    line-height: 1; /* Adjust line height to stack text */
+    line-height: 1;
     display: flex;
     align-items: center;
 }
 
 #nav-logo {
-    height: 1.5em; /* Adjusted height to better align with title */
-    flex-shrink: 0; /* Prevent the logo from shrinking */
-    margin-right: 10px; /* Ensure space between logo and title */
+    height: 2.5em; /* Increased height for the logo */
+    flex-shrink: 0;
+    margin-right: 10px;
 }
 
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: flex-start; /* Move navigation links to the left */
+    justify-content: center; /* Center navigation links */
     align-items: center;
-    flex: 1; /* Allow nav to take up available space */
-    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    flex: 1;
+    flex-wrap: nowrap; /* No wrapping on desktop */
 }
 
 nav ul {
     display: flex;
-    justify-content: flex-start; /* Move the links to the left */
+    justify-content: center;
     align-items: center;
     list-style-type: none;
     margin: 0;
-    padding-left: 10px; /* Further move the links to the left */
+    padding: 0;
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 12px; /* Reduced font size to match module */
-    gap: 8px; /* Adjusted gap for better spacing */
-    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
-    text-align: center;
+    font-size: 14px; 
+    gap: 15px; /* Increased gap for better spacing on desktop */
+    flex-wrap: nowrap; 
 }
 
 nav ul li {
-    margin: 0 8px; /* Reduced margin for smaller screens */
+    margin: 0 15px; /* Adjusted margin for desktop */
 }
 
 nav ul li a {
     color: #FFFFFF;
     text-decoration: none;
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.2em; /* Adjusted font size */
+    font-size: 1.4em;
     text-shadow: 0 0 5px #FFFFFF;
     position: relative;
 }
@@ -98,10 +96,11 @@ nav ul li a:hover::after {
 
 /* Terminal Module Styles */
 #terminal {
-    position: static; /* Remove absolute positioning for better flow */
+    position: absolute; /* Keep module on the far right */
+    top: 10px;
+    right: 10px;
     text-align: right;
-    flex-shrink: 0; /* Prevent the terminal from shrinking */
-    width: 170px; /* Slightly increased width for balance */
+    width: 170px;
     padding: 10px;
     background-color: #000;
     border: 2px solid #39FF14;
@@ -118,13 +117,13 @@ nav ul li a:hover::after {
     background-image: url('ectomeme3.gif');
     background-size: cover;
     background-position: center;
-    height: calc(100vh + 20px); /* Increase height slightly */
+    height: calc(100vh + 20px);
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Move content to start higher up */
+    align-items: flex-start;
     text-align: center;
-    padding-top: 50px; /* Adjusted padding to move content slightly lower */
-    padding-bottom: 20px; /* Add padding at the bottom */
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .hero-content {
@@ -193,7 +192,7 @@ section a:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px; /* Add some padding to space the grid out */
+    padding: 20px; 
 }
 
 .gallery-grid img {
@@ -201,7 +200,7 @@ section a:hover::after {
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    border: 2px solid #00FF00; /* Add a border for better visibility */
+    border: 2px solid #00FF00; 
 }
 
 .gallery-grid img:hover {
@@ -237,19 +236,19 @@ footer {
 
 #enter-button {
     position: absolute;
-    padding: 10px 80px; /* Thinner, more rectangular shape */
+    padding: 10px 80px; 
     background-color: #00FF00;
     color: #000;
-    font-family: 'Press Start 2P', cursive; /* Pixelated video-game-like font */
+    font-family: 'Press Start 2P', cursive; 
     text-decoration: none;
-    border-radius: 5px; /* Reduced border-radius for a rectangular shape */
+    border-radius: 5px;
     box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
-    font-size: 2.5em; /* Larger font size to fill the button more */
+    font-size: 2.5em; 
     text-align: center;
     transition: opacity 2s ease, all 0.3s ease;
     opacity: 0;
     animation: fadeIn 2s forwards;
-    bottom: 25%; /* Move the button up higher */
+    bottom: 25%; 
 }
 
 #enter-button:hover {
@@ -262,11 +261,11 @@ footer {
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        bottom: 0%; /* Start lower */
+        bottom: 0%; 
     }
     100% {
         opacity: 1;
-        bottom: 25%; /* Position it higher */
+        bottom: 25%; 
     }
 }
 
@@ -305,13 +304,15 @@ footer {
     }
 
     #title-logo-container {
-        flex-direction: row; /* Align logo and title on one line */
+        flex-direction: column; 
         align-items: center;
         margin-bottom: 15px;
     }
 
     #nav-logo {
-        margin-right: 10px; /* Ensure space between logo and title */
+        margin-right: 0; 
+        margin-bottom: 10px;
+        height: 2em;
     }
 
     #terminal {
@@ -325,7 +326,7 @@ footer {
         flex-direction: column;
         gap: 10px;
         justify-content: center;
-        font-size: 1.2em; /* Reduced font size to better match module */
+        font-size: 1.2em; 
         padding: 0;
         margin-top: 20px;
         text-align: center;
@@ -335,6 +336,10 @@ footer {
         margin: 5px 0;
     }
 
+    .hero h2 {
+        font-size: 1.8It seems the response got cut off. Here’s the continuation and completion of your CSS file:
+
+```css
     .hero h2 {
         font-size: 1.8em;
         margin: 10px 0;
