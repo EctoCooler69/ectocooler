@@ -16,25 +16,45 @@
         </audio>
         <img id="splash-gif" src="ectomeme.gif" alt="Splash Screen">
         <a href="home.html" id="enter-button">SMASH</a>
+        <div id="mute-toggle" style="position: absolute; top: 20px; right: 20px; cursor: pointer;">
+            🔊
+        </div>
     </div>
 
-    <!-- JavaScript to Handle Audio Continuity -->
+    <!-- JavaScript to Handle Audio Continuity and Mute Toggle -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let audioElement = document.getElementById('background-audio');
+            let muteToggle = document.getElementById('mute-toggle');
 
-            // Check if audio already exists in localStorage
-            if (!localStorage.getItem('audioPlaying')) {
-                localStorage.setItem('audioPlaying', 'true');
+            // Check if audio is already playing and its state
+            if (!sessionStorage.getItem('audioPlaying')) {
+                sessionStorage.setItem('audioPlaying', 'true');
                 audioElement.play();
             } else {
-                audioElement.pause();
+                audioElement.currentTime = sessionStorage.getItem('audioTime');
+                audioElement.play();
             }
 
-            // Keep the audio playing as user clicks to enter
+            // Save the current time of the audio before leaving the page
+            window.addEventListener('beforeunload', function() {
+                sessionStorage.setItem('audioTime', audioElement.currentTime);
+            });
+
+            // Toggle mute/unmute
+            muteToggle.addEventListener('click', function() {
+                if (audioElement.muted) {
+                    audioElement.muted = false;
+                    muteToggle.textContent = '🔊';
+                } else {
+                    audioElement.muted = true;
+                    muteToggle.textContent = '🔇';
+                }
+            });
+
+            // Redirect to homepage
             document.getElementById('enter-button').addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent default link behavior
-                audioElement.pause(); // Pause the audio to prevent double playing
                 window.location.href = "home.html"; // Redirect to the main site
             });
         });
