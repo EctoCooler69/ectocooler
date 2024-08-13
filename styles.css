@@ -39,7 +39,7 @@ header {
 }
 
 #nav-logo {
-    height: 6em; /* Further increased height for the logo */
+    height: 9em; /* 50% increase in logo size */
     flex-shrink: 0;
     margin-right: 10px;
 }
@@ -47,28 +47,28 @@ header {
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: center; /* Center navigation links */
+    justify-content: flex-start; /* Move navigation links to the left */
     align-items: center;
     flex: 1;
-    flex-wrap: nowrap; /* No wrapping on desktop */
-    margin-right: auto;
+    flex-wrap: nowrap; 
+    margin-left: -30px; /* Shift links 5 spaces to the left */
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; 
     align-items: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', sans-serif;
     font-size: 14px; 
-    gap: 12px; /* Decreased gap to move links slightly to the left */
+    gap: 12px; /* Decreased gap for spacing */
     flex-wrap: nowrap; 
 }
 
 nav ul li {
-    margin: 0 12px; /* Adjusted margin to move links left */
+    margin: 0 12px; /* Adjusted margin */
 }
 
 nav ul li a {
@@ -101,15 +101,15 @@ nav ul li a:hover::after {
     position: relative; 
     right: 0;
     text-align: right;
-    width: 130px; /* Further reduced width */
+    width: 130px; 
     height: auto;
-    padding: 6px; /* Reduced padding */
+    padding: 6px; 
     background-color: #000;
     border: 2px solid #39FF14;
     border-radius: 5px; 
     box-shadow: 0px 0px 15px #39FF14;
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 10px; /* Slightly smaller font size */
+    font-size: 10px; 
     line-height: 1.2;
     color: #39FF14;
 }
@@ -338,7 +338,9 @@ footer {
         margin: 5px 0;
     }
 
-    .heroHere's the continuation and completion of the CSS for mobile styles:
+    .hero h2 {
+        font-size: 1.8em;
+        margin: 10px 0Here’s the completion of the mobile styles:
 
 ```css
     .hero h2 {
