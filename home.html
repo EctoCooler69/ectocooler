@@ -25,9 +25,9 @@
             </ul>
             <div id="terminal">
                 <div id="live-quotes">
-                    <p>BTC <span>$59,102</span></p>
-                    <p>SOL <span>$146.08</span></p>
-                    <p>ECTO <span>$N/A</span></p>
+                    <p>BTC <span id="btc-price">$59,102</span></p>
+                    <p>SOL <span id="sol-price">$146.08</span></p>
+                    <p>ECTO <span id="ecto-price">$N/A</span></p>
                 </div>
             </div>
         </nav>
@@ -71,24 +71,25 @@
         <p>© 2024 Ecto Cooler. All Rights Reserved.</p>
     </footer>
 
-<body>
-
     <!-- JavaScript for Fetching Real-Time Prices -->
     <script>
         // Function to fetch prices from CoinGecko API
         async function fetchPrices() {
-            const apiKey = 'CG-A8Mpro5NF7jxj4hWxoaHscrQ';
-            const url = `https://pro-api.coingecko.com/api/v3/simple/price?ids=bitcoin,solana&vs_currencies=usd&x_cg_pro_api_key=${apiKey}`;
+            const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,solana&vs_currencies=usd';
 
             try {
                 const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
                 const data = await response.json();
 
                 // Update the prices in the nav bar
                 document.getElementById('btc-price').innerText = `$${data.bitcoin.usd.toLocaleString()}`;
                 document.getElementById('sol-price').innerText = `$${data.solana.usd.toLocaleString()}`;
 
-                // Update ECTO price if available
+                // Assuming ECTO is part of your custom tokens; this won't work unless it exists in CoinGecko
                 const ectoPrice = data.ecto ? `$${data.ecto.usd.toLocaleString()}` : '$N/A';
                 document.getElementById('ecto-price').innerText = ectoPrice;
             } catch (error) {
@@ -102,8 +103,6 @@
         // Fetch prices on initial load
         fetchPrices();
     </script>
-</body>
-
 
     <!-- JavaScript for Audio Continuity and Contract Address Copy -->
     <script>
