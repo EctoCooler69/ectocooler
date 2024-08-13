@@ -15,7 +15,7 @@ header {
     padding: 10px 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align everything to the left */
     position: relative;
     flex-wrap: nowrap;
 }
@@ -36,7 +36,7 @@ header {
     line-height: 1;
     display: flex;
     align-items: center;
-    margin-right: 10px; /* Move closer to the logo */
+    margin-right: 5px; /* Move closer to the logo */
 }
 
 #nav-logo {
@@ -52,7 +52,7 @@ nav {
     align-items: center;
     flex: 1;
     flex-wrap: nowrap;
-    margin-left: -50px; /* Move links further to the left */
+    margin-left: -40px; /* Move links further to the left */
 }
 
 nav ul {
@@ -64,12 +64,12 @@ nav ul {
     padding: 0;
     font-family: 'Press Start 2P', sans-serif;
     font-size: 14px;
-    gap: 20px; /* Increase gap slightly for better spacing */
+    gap: 10px; /* Reduce gap for closer spacing */
     flex-wrap: nowrap;
 }
 
 nav ul li {
-    margin: 0 15px; /* Adjusted margin */
+    margin: 0 10px; /* Adjusted margin */
 }
 
 nav ul li a {
@@ -337,10 +337,6 @@ footer {
     }
 
     nav ul li {
-        margin:Here is the continuation and completion of the mobile styles:
-
-```css
-    nav ul li {
         margin: 5px 0;
     }
 
@@ -349,6 +345,11 @@ footer {
         margin: 10px 0;
     }
 
+    .hero p {
+        font-size: 1em;
+        margin:Here's the continuation and completion of the mobile styles:
+
+```css
     .hero p {
         font-size: 1em;
         margin: 10px 0;
