@@ -1,3 +1,14 @@
+/* General Website Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #00FF00;
+    cursor: url('custom-cursor.png'), auto; /* Set custom cursor */
+}
+
 /* Header and Navigation Styles */
 header {
     background-color: #111;
@@ -105,4 +116,188 @@ nav ul li a:hover::after {
     flex: 1;
     text-align: right; /* Align price to the right */
     margin-left: 10px; /* Increase space between symbol and price */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('ectomeme3.gif');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh + 20px); /* Increase height slightly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px; /* Add padding at the bottom */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #00FF00;
+    font-size: 2.5em;
+    text-shadow: 0 0 20px #00FF00;
+    margin: 0;
+}
+
+.hero p {
+    color: #FFF;
+    font-size: 1.2em;
+    text-shadow: 0 0 10px #FFF;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #00FF00;
+    text-shadow: 0 0 10px #00FF00;
+    margin-bottom: 30px;
+}
+
+section p {
+    color: #FFF;
+    font-size: 1.2em;
+    text-shadow: 0 0 10px #FFF;
+}
+
+section a {
+    color: #00FF00;
+    text-decoration: none;
+    position: relative;
+}
+
+section a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00FF00;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+section a:hover::after {
+    width: 100%;
+}
+
+/* Meme Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px; /* Add some padding to space the grid out */
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: 2px solid #00FF00; /* Add a border for better visibility */
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #111;
+    color: #00FF00;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Splash Screen Styles */
+#splash-screen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#splash-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#enter-button {
+    position: absolute;
+    padding: 20px 40px;
+    background-color: #00FF00;
+    color: #000;
+    font-family: 'Press Start 2P', cursive; /* Ensure this matches */
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00;
+    font-size: 1.2em;
+    text-align: center;
+    transition: opacity 2s ease, all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    bottom: 15%; /* Adjust the bottom position */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        bottom: -50px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 15%; /* Position it slightly lower */
+    }
+}
+
+#enter-button:hover {
+    background-color: #000;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+}
+
+/* Contract Copy Glow Effect */
+#contract-address {
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+#contract-address:hover {
+    color: #00FF00;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+/* Copied Notification Styles */
+#copied-notification {
+    display: none;
+    color: #00FF00;
+    font-size: 1em;
+    margin-left: 10px;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+#copied-notification.show {
+    display: inline;
+}
+
+.hidden {
+    display: none;
 }
