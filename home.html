@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecto Cooler</title>
+    <title>Ecto Cooler - Home</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon Link -->
 </head>
 <body>
- <!-- Main Content -->
+    <!-- Main Content -->
     <header>
         <div id="title-logo-container">
             <h1 id="site-title">Ecto<br>Cooler</h1>
@@ -18,10 +16,10 @@
         <nav>
             <ul>
                 <li><a href="#">Tech</a></li>
-                <li><a href="#Ecto Cooler Technology Stack">$ECTO</a></li>
-                <li><a href="#Memes">Memes</a></li>
+                <li><a href="#">$ECTO</a></li>
+                <li><a href="#">Memes</a></li>
                 <li><a href="#">Telegram</a></li>
-                <li><a href="https://x.com/ectocoolerxyz">Twitter</a></li>
+                <li><a href="#">Twitter</a></li>
             </ul>
             <div id="terminal">
                 <div id="live-quotes">
@@ -36,7 +34,7 @@
     <!-- Hero Section -->
     <div class="hero">
         <div class="hero-content">
-            <h2>NEON GREEN AURA!</h2>
+            <h2>NEON GREEN AURA</h2>
             <p>CA: <span id="contract-address">N/A</span></p>
             <span id="copied-notification" class="hidden">Copied!</span>
         </div>
@@ -73,6 +71,7 @@
 
     <!-- JavaScript for Contract Address Copy -->
     <script>
+        // Contract Address Copy Functionality
         const contractAddress = document.getElementById('contract-address');
         const copiedNotification = document.getElementById('copied-notification');
 
@@ -84,6 +83,16 @@
                         copiedNotification.classList.remove('show');
                     }, 2000);
                 });
+        });
+
+        // Ensure audio continues playing seamlessly
+        document.addEventListener("DOMContentLoaded", function() {
+            if (sessionStorage.getItem('audioPlaying')) {
+                let audioElement = document.getElementById(sessionStorage.getItem('audioElementId'));
+                if (audioElement) {
+                    audioElement.play();
+                }
+            }
         });
     </script>
 </body>
