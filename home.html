@@ -6,56 +6,61 @@
     <title>Ecto Cooler</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon Link -->
 </head>
 <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="ectomeme3.gif" id="splash-gif" alt="Splash GIF">
+        <a href="home.html" id="enter-button">Enter</a>
+    </div>
+
+    <!-- Main Content -->
     <header>
         <div id="title-logo-container">
             <h1 id="site-title">Ecto<br>Cooler</h1>
-            <img src="ectobacktrans.png" alt="Ecto Cooler Logo" id="nav-logo">
+            <img src="ectobacktrans.png" alt="Ecto Logo" id="nav-logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#memes">Memes</a></li>
-                <li><a href="#tech">Tech</a></li>
-                <li><a href="#ecto">$ECTO</a></li>
-                <li><a href="#telegram">Telegram</a></li>
-                <li><a href="#twitter">Twitter</a></li>
+                <li><a href="#">Memes</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">$ECTO</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">Twitter</a></li>
             </ul>
-        </nav>
-        <div id="terminal">
-            <div id="live-quotes">
-                <p>BTC <span id="btc-price">$59,102</span></p>
-                <p>SOL <span id="sol-price">$146.08</span></p>
-                <p>ECTO <span id="ecto-price">$N/A</span></p>
+            <div id="terminal">
+                <div id="live-quotes">
+                    <p>BTC <span>$59,102</span></p>
+                    <p>SOL <span>$146.08</span></p>
+                    <p>ECTO <span>$N/A</span></p>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <div class="hero">
         <div class="hero-content">
             <h2>Feel The NEON GREEN AURA!</h2>
-            <p>
-                CA: <span id="contract-address" class="clickable">EqWvgYb7foNd6gMshYKSyoTYkzn52aNAfYat9gKipump</span>
-                <span id="copied-notification" class="hidden">Copied!</span>
-            </p>
+            <p>CA: <span id="contract-address">EqWvgYb7foNd6gMshYKSyoTYkzn52aNAfYat9gKipump</span></p>
+            <span id="copied-notification" class="hidden">Copied!</span>
         </div>
-    </section>
+    </div>
 
-    <!-- Technology Stack Section -->
-    <section id="tech">
+    <!-- Main Sections -->
+    <section>
         <h2>Ecto Cooler Technology Stack</h2>
         <p>Ecto Cooler is FUCKING RAD! It's like the ultimate juicebox that zaps you back to Saturday morning cartoons and playing N64 with the boys. The citrusy tropical taste is out of this world, and through months of rigorous scientific experimentation we’ve cryptographically programmed this unique Culture token to infuse Ecto Cooler's NEON GREEN AURA into every weekly candle.</p>
     </section>
 
-    <!-- Telegram Section -->
-    <section id="telegram">
+    <section>
         <h2>$ECTO Token</h2>
-        <p>100b Total Supply, Fairly launched on <a href="https://pump.fun" target="_blank">pump.fun 💊</a></p>
+        <p>100b Total Supply, Fairly launched on <a href="https://pump.fun" target="_blank">pump.fun</a> 💊</p>
     </section>
 
-    <!-- Memes Section -->
-    <section id="memes">
+    <!-- Meme Gallery -->
+    <section class="gallery">
         <h2>Memes</h2>
         <div class="gallery-grid">
             <img src="images/ectomeme1.png" alt="Meme 1">
@@ -67,52 +72,24 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Ecto Cooler. All Rights Reserved.</p>
+        <p>© 2024 Ecto Cooler. All Rights Reserved.</p>
     </footer>
 
+    <!-- JavaScript for Contract Address Copy -->
     <script>
-        async function fetchLivePrices() {
-            const apiKey = 'CG-A8Mpro5NF7jxj4hWxoaHscrQ';
-            const url = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,solana,ecto-cooler&vs_currencies=usd`;
-            
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
+        const contractAddress = document.getElementById('contract-address');
+        const copiedNotification = document.getElementById('copied-notification');
 
-                document.getElementById('btc-price').textContent = `$${data.bitcoin.usd.toLocaleString()}`;
-                document.getElementById('sol-price').textContent = `$${data.solana.usd.toLocaleString()}`;
-                document.getElementById('ecto-price').textContent = data['ecto-cooler'] ? `$${data['ecto-cooler'].usd}` : '$N/A';
-            } catch (error) {
-                console.error('Error fetching prices:', error);
-            }
-        }
-
-        // Fetch prices every 10 seconds
-        setInterval(fetchLivePrices, 10000);
-        // Initial fetch
-        fetchLivePrices();
-
-        // Copy address to clipboard and show notification
-        document.getElementById('contract-address').addEventListener('click', function() {
-            // Copy the address to the clipboard
-            const address = this.innerText;
-            navigator.clipboard.writeText(address).then(function() {
-                // Change the color to neon green
-                document.getElementById('contract-address').style.color = '#00FF00';
-                document.getElementById('contract-address').style.textShadow = '0 0 10px #00FF00';
-                
-                // Show the "copied" notification
-                const notification = document.getElementById('copied-notification');
-                notification.classList.add('show');
-
-                // Hide the notification after 2 seconds
-                setTimeout(function() {
-                    notification.classList.remove('show');
-                }, 2000);
-            }).catch(function(error) {
-                console.error('Failed to copy text: ', error);
-            });
+        contractAddress.addEventListener('click', () => {
+            navigator.clipboard.writeText(contractAddress.textContent)
+                .then(() => {
+                    copiedNotification.classList.add('show');
+                    setTimeout(() => {
+                        copiedNotification.classList.remove('show');
+                    }, 2000);
+                });
         });
     </script>
 </body>
