@@ -12,27 +12,40 @@
         <a href="home.html" id="enter-button">Enter</a>
     </div>
 
-    <!-- JavaScript to Handle Audio Playback -->
+    <!-- JavaScript to Handle Audio Playback and Seamless Transition -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let audioElement = document.createElement('audio');
-            audioElement.src = "audio/gbinstr.mp3"; // Replace with your audio file path
-            audioElement.loop = true;
+            let audioElement;
 
-            // Attempt to play audio on page load
-            audioElement.play().then(() => {
-                console.log('Audio is playing');
-            }).catch((error) => {
-                console.log('Autoplay failed. Will start playing on user interaction.');
-                // Add event listener to play on first user interaction if autoplay fails
-                document.addEventListener('click', () => {
-                    audioElement.play();
-                }, { once: true });
-            });
+            // Check if the audio is already playing
+            if (sessionStorage.getItem('audioPlaying')) {
+                audioElement = document.getElementById(sessionStorage.getItem('audioElementId'));
+            } else {
+                // Create and play the audio
+                audioElement = document.createElement('audio');
+                audioElement.src = "audio/gbinstr.mp3"; // Replace with your audio file path
+                audioElement.loop = true;
+                audioElement.id = "background-audio";
+                document.body.appendChild(audioElement);
+
+                audioElement.play().then(() => {
+                    console.log('Audio is playing');
+                }).catch((error) => {
+                    console.log('Autoplay failed. Will start playing on user interaction.');
+                    document.addEventListener('click', () => {
+                        audioElement.play();
+                    }, { once: true });
+                });
+
+                // Store in sessionStorage that the audio is playing
+                sessionStorage.setItem('audioPlaying', true);
+                sessionStorage.setItem('audioElementId', 'background-audio');
+            }
 
             // Keep the audio playing as user clicks to enter
             document.getElementById('enter-button').addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent default link behavior
+                sessionStorage.setItem('audioPlaying', true); // Persist audio state
                 window.location.href = "home.html"; // Redirect to the main site
             });
         });
