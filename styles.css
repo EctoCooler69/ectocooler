@@ -35,13 +35,13 @@ header {
     line-height: 1;
     display: flex;
     align-items: center;
-    margin-right: 10px; /* Closer spacing between title and logo */
+    margin-left: 20px; /* Move title 2 spaces to the right */
 }
 
 #nav-logo {
     height: 9em; /* Keep logo size as adjusted */
     flex-shrink: 0;
-    margin-right: 10px; /* Bring the logo closer to the title */
+    margin-right: -30px; /* Move logo 3 spaces to the left */
 }
 
 /* Navigation Bar */
