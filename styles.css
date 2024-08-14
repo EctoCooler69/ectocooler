@@ -109,6 +109,7 @@ nav ul li a:hover::after {
     line-height: 1.2;
     color: #39FF14;
     margin-left: auto; /* Ensure it stays to the far right */
+    margin-right: 30px; /* Move module 3 spaces to the left */
 }
 
 /* Hero Section Styles */
