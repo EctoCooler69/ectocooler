@@ -41,7 +41,7 @@ header {
 #nav-logo {
     height: 9em; /* Keep logo size as adjusted */
     flex-shrink: 0;
-    margin-right: -30px; /* Move logo 3 spaces to the left */
+    margin-right: -60px; /* Move logo 6 spaces to the left (additional 3 spaces) */
 }
 
 /* Navigation Bar */
