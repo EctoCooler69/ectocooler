@@ -130,7 +130,7 @@ nav ul li a:hover::after {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-    margin-top: 50px; /* Move hero text down by 5 spaces (50px) */
+    margin-top: 150px; /* Move hero text down by 15 spaces (150px) total */
 }
 
 .hero h2 {
