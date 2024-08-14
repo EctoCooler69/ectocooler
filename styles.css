@@ -296,6 +296,11 @@ footer {
     display: none;
 }
 
+/* Show Element */
+.show {
+    display: inline;
+}
+
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     header {
