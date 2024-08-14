@@ -28,7 +28,7 @@
 <body>
     <!-- Splash Screen -->
     <div id="splash-screen">
-        <audio id="background-audio" autoplay loop>
+        <audio id="background-audio" loop muted>
             <source src="audio/gbinstr.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
@@ -107,16 +107,18 @@
             let audioElement = document.getElementById('background-audio');
             let muteToggle = document.getElementById('mute-toggle');
 
-            // Check if audio was muted previously
-            if (localStorage.getItem('isMuted') === 'true') {
-                audioElement.muted = true;
-                muteToggle.innerText = '🔇';
+            // Unmute the audio after the page has loaded
+            if (localStorage.getItem('isMuted') !== 'true') {
+                audioElement.muted = false;
+                audioElement.play(); // Play the audio after unmuting
+                muteToggle.innerText = '🔊';
             }
 
             // Toggle mute/unmute
             muteToggle.addEventListener('click', function() {
                 if (audioElement.muted) {
                     audioElement.muted = false;
+                    audioElement.play(); // Play the audio after unmuting
                     muteToggle.innerText = '🔊';
                     localStorage.setItem('isMuted', 'false');
                 } else {
