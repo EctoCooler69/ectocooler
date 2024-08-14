@@ -50,6 +50,7 @@ nav {
     justify-content: flex-start; /* Align links to the left, directly next to the logo */
     align-items: center;
     flex-grow: 1; /* Allow nav to take up available space */
+    margin-left: 30px; /* Move links 3 spaces to the right */
 }
 
 nav ul {
