@@ -214,12 +214,47 @@ section a:hover::after {
     margin-bottom: 20px;
 }
 
+#hashtags-section h2 a {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+#hashtags-section h2 a:hover {
+    text-decoration: underline;
+}
+
 #hashtags-section p {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.2em;
     margin-bottom: 15px;
     color: #FFFFFF;
     text-shadow: 0 0 5px #FFFFFF;
+}
+
+/* Green Text for NEON GREEN AURA and #NGR */
+.green-text {
+    color: #00FF00;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+/* Strikethrough effect for the word "cum" */
+.strikethrough {
+    text-decoration: line-through;
+}
+
+/* Style for the bullet points */
+#hashtags-section p:before {
+    content: "•";
+    display: inline-block;
+    margin-right: 10px;
+    color: #00FF00;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+#hashtags-section p:nth-child(5):before,
+#hashtags-section p:nth-child(7):before,
+#hashtags-section p:nth-child(9):before {
+    content: "";
 }
 
 /* Meme Gallery Styles */
