@@ -13,7 +13,7 @@ body, html {
 /* Header and Navigation Styles */
 header {
     background-color: #111;
-    padding: 10px 10px;
+    padding: 5px 10px; /* Reduced padding to decrease height */
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space between the link array and the module */
@@ -51,7 +51,7 @@ nav {
     justify-content: flex-start; /* Align links to the left, directly next to the logo */
     align-items: center;
     flex-grow: 1; /* Allow nav to take up available space */
-    margin-left: 30px; /* Move links 3 spaces to the right */
+    margin-left: 20px; /* Move links 2 spaces to the right */
 }
 
 nav ul {
@@ -63,11 +63,11 @@ nav ul {
     padding: 0;
     font-family: 'Press Start 2P', sans-serif;
     font-size: 14px;
-    gap: 10px; /* Reduce gap for closer spacing */
+    gap: 5px; /* Reduced gap for closer spacing */
 }
 
 nav ul li {
-    margin: 0 10px; /* Adjusted margin */
+    margin: 0 5px; /* Reduced margin */
 }
 
 nav ul li a {
@@ -110,7 +110,7 @@ nav ul li a:hover::after {
     line-height: 1.2;
     color: #39FF14;
     margin-left: auto; /* Ensure it stays to the far right */
-    margin-right: 30px; /* Move module 3 spaces to the left */
+    margin-right: 20px; /* Move module 2 spaces to the left */
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -132,20 +132,20 @@ nav ul li a:hover::after {
     background-image: url('ectomeme3.gif');
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 50px); /* Reduced height by 50px */
+    height: calc(100vh - 70px); /* Reduced height further */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 30px; /* Reduced padding at the top */
+    padding-bottom: 10px; /* Reduced padding at the bottom */
 }
 
 .hero-content {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    margin-top: 100px; /* Adjusted margin to move content up */
+    margin-top: 70px; /* Reduced margin to move content up */
 }
 
 .hero h2 {
@@ -165,16 +165,16 @@ nav ul li a:hover::after {
 
 /* Section Styles */
 section {
-    padding: 30px 20px; /* Reduced padding from 60px to 30px */
+    padding: 20px 10px; /* Reduced padding to minimize empty space */
     text-align: center; /* Ensure all section text is centered */
 }
 
 #tech-section {
-    padding-bottom: 10px; /* Less padding at the bottom to reduce space before the image */
+    padding-bottom: 5px; /* Less padding at the bottom to reduce space before the image */
 }
 
 #memes-section {
-    padding-top: 10px; /* Less padding at the top to reduce space after the image */
+    padding-top: 5px; /* Less padding at the top to reduce space after the image */
 }
 
 section h2 {
@@ -182,7 +182,7 @@ section h2 {
     font-size: 2em; /* Match font size */
     color: #00FF00;
     text-shadow: 0 0 10px #00FF00;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reduced margin to minimize empty space */
 }
 
 section p {
@@ -190,6 +190,7 @@ section p {
     font-size: 1.2em;
     color: #FFF;
     text-shadow: 0 0 5px #FFF; /* Match text shadow */
+    margin-bottom: 10px; /* Reduced margin to minimize empty space */
 }
 
 section a {
@@ -216,7 +217,7 @@ section a:hover::after {
 
 /* Hashtags and Catchphrases Section */
 #hashtags-section {
-    padding: 30px 20px;
+    padding: 20px 10px;
     text-align: center;
     color: #00FF00;
     text-shadow: 0 0 10px #00FF00;
@@ -225,7 +226,7 @@ section a:hover::after {
 #hashtags-section h2 {
     font-family: 'Press Start 2P', cursive;
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin */
 }
 
 #hashtags-section h2 a {
@@ -240,7 +241,7 @@ section a:hover::after {
 #hashtags-section p {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.2em;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin */
     color: #FFFFFF;
     text-shadow: 0 0 5px #FFFFFF;
 }
@@ -260,7 +261,7 @@ section a:hover::after {
 #hashtags-section p:before {
     content: "•";
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 5px; /* Reduced margin */
     color: #00FF00;
     text-shadow: 0 0 10px #00FF00;
 }
@@ -275,8 +276,8 @@ section a:hover::after {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 10px; /* Reduced gap */
+    padding: 10px; /* Reduced padding */
 }
 
 .gallery-grid img {
@@ -295,7 +296,7 @@ section a:hover::after {
 footer {
     background-color: #111;
     color: #00FF00;
-    padding: 20px;
+    padding: 10px; /* Reduced padding */
     text-align: center;
     font-family: 'Press Start 2P', cursive;
 }
