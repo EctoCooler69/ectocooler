@@ -149,8 +149,15 @@ nav ul li a:hover::after {
 
 /* Section Styles */
 section {
-    padding: 60px 20px;
-    text-align: center;
+    padding: 30px 20px; /* Reduced padding from 60px to 30px */
+}
+
+#tech-section {
+    padding-bottom: 10px; /* Less padding at the bottom to reduce space before the image */
+}
+
+#memes-section {
+    padding-top: 10px; /* Less padding at the top to reduce space after the image */
 }
 
 section h2 {
