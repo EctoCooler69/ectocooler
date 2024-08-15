@@ -470,7 +470,7 @@ footer {
     /* Hero section adjustments for mobile */
     .hero {
         height: calc(70vh - 40px); /* Shrink the height of the hero section */
-        background-position: left 80px center; /* Shift the background image further to the left */
+        background-position: left 10px center; /* Shift the background image further to the left */
     }
 
     .hero-content {
