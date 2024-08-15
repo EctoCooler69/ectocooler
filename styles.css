@@ -63,11 +63,11 @@ nav ul {
     padding: 0;
     font-family: 'Press Start 2P', sans-serif;
     font-size: 14px;
-    gap: 5px; /* Reduced gap for closer spacing */
+    gap: 15px; /* Increased gap for more spacing */
 }
 
 nav ul li {
-    margin: 0 5px; /* Reduced margin */
+    margin: 0 15px; /* Increased margin for more spacing */
 }
 
 nav ul li a {
@@ -132,12 +132,12 @@ nav ul li a:hover::after {
     background-image: url('ectomeme3.gif');
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 70px); /* Reduced height further */
+    height: calc(100vh - 60px); /* Adjusted height */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    padding-top: 30px; /* Reduced padding at the top */
+    padding-top: 40px; /* Adjusted padding at the top */
     padding-bottom: 10px; /* Reduced padding at the bottom */
 }
 
@@ -145,7 +145,7 @@ nav ul li a:hover::after {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 15px;
     border-radius: 10px;
-    margin-top: 70px; /* Reduced margin to move content up */
+    margin-top: 60px; /* Reduced margin to move content up */
 }
 
 .hero h2 {
