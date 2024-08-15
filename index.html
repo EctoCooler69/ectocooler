@@ -23,6 +23,38 @@
             background-color: #000;
             text-align: center;
         }
+
+        /* Terminal Module Styles */
+        #terminal {
+            text-align: right;
+            width: 130px;
+            height: auto;
+            padding: 6px;
+            background-color: #000;
+            border: 2px solid #39FF14;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px #39FF14;
+            font-family: 'Press Start 2P', sans-serif;
+            font-size: 10px;
+            line-height: 1.2;
+            color: #39FF14;
+            margin-left: auto; /* Ensure it stays to the far right */
+            margin-right: 30px; /* Move module 3 spaces to the left */
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        #live-quotes p {
+            display: flex;
+            justify-content: space-between; /* Align symbol to left and price to right */
+            margin: 0; /* Remove default margin */
+            padding: 2px 0; /* Add padding for better spacing */
+        }
+
+        #live-quotes p span {
+            flex-shrink: 0; /* Prevent shrinking of the price text */
+        }
     </style>
 </head>
 <body>
@@ -75,13 +107,12 @@
         <section id="tech-section">
             <h2>Ecto Cooler Technology Stack</h2>
             <p>Ecto Cooler is FUCKING RAD! It's like the ultimate juicebox that zaps you back to Saturday morning cartoons and playing N64 with the boys. The citrusy tropical taste is out of this world, and through months of rigorous scientific experimentation we’ve cryptographically programmed this unique Culture token to infuse Ecto Cooler's NEON GREEN AURA into every candle.</p>
-             <img src="ectoborder2.png" alt="Border Image" style="width: 100%; height: auto;">
+            <img src="ectoborder2.png" alt="Border Image" style="width: 100%; height: auto;">
         </section>
 
         <section>
             <h2>$ECTO Token</h2>
             <p>100b Total Supply, Fairly launched on <a href="https://pump.fun" target="_blank">pump.fun</a> 💊</p>
-             <img src="ectoborder1.png" alt="Border Image" style="width: 100%; height: auto;">
         </section>
 
         <!-- Meme Gallery -->
@@ -106,19 +137,19 @@
             </div>
         </section>
 
-<section id="hashtags-section">
-    <h2><a href="https://x.com/ectocoolerxyz" target="_blank">Hashtags and Catchphrases to use on Twitter</a></h2>
-    <p>#JBR = Juicebox Revolution</p>
-    <p>#NGR = <span class="green-text">NEON GREEN AURA</span></p>
-    <p>#GS = Green Slime</p>
-    <p>#SLIMED = if you just posted an image of someone covered in <span class="strikethrough">cum</span> slime to indicate you have jumped them into our set (they bought $ECTO), or you became so sexually aroused you splooged <span class="green-text">#NGR</span> all over them. See here.</p>
-    <p>•</p>
-    <p>Join the JuiceBox Revolution today! #JBR</p>
-    <p>•</p>
-    <p>I got that <span class="green-text">#NGR</span> in me.</p>
-    <p>•</p>
-    <p>Erecto off that $ECTO</p>
-</section>
+        <section id="hashtags-section">
+            <h2><a href="https://x.com/ectocoolerxyz" target="_blank">Hashtags and Catchphrases to use on Twitter</a></h2>
+            <p>#JBR = Juicebox Revolution</p>
+            <p>#NGR = <span class="green-text">NEON GREEN AURA</span></p>
+            <p>#GS = Green Slime</p>
+            <p>#SLIMED = if you just posted an image of someone covered in <span class="strikethrough">cum</span> slime to indicate you have jumped them into our set (they bought $ECTO), or you became so sexually aroused you splooged <span class="green-text">#NGR</span> all over them. See here.</p>
+            <p>•</p>
+            <p>Join the JuiceBox Revolution today! #JBR</p>
+            <p>•</p>
+            <p>I got that <span class="green-text">#NGR</span> in me.</p>
+            <p>•</p>
+            <p>Erecto off that $ECTO</p>
+        </section>
 
         <!-- Footer -->
         <footer>
