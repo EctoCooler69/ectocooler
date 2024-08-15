@@ -172,10 +172,11 @@ nav ul li a:hover::after {
 }
 
 #contract-address {
-    margin-left: 5px; /* Reduced the spacing between "CA:" and the address */
+    margin-left: 5px;
     cursor: pointer;
     color: #FFFFFF;
     transition: color 0.3s ease;
+    display: inline; /* Ensure it's inline so "Copied!" replaces it on the same line */
 }
 
 #contract-address:hover {
@@ -184,19 +185,20 @@ nav ul li a:hover::after {
 }
 
 #copied-notification {
-    display: none;
+    display: none; /* Hidden by default */
     color: #00FF00;
     font-size: 1em;
     margin-left: 10px;
     text-shadow: 0 0 10px #00FF00;
+    display: inline; /* Ensure it's inline so it appears on the same line as the address */
 }
 
 .hidden {
-    display: none;
+    display: none; /* Utility class to hide elements */
 }
 
 .show {
-    display: inline;
+    display: inline; /* Utility class to show elements */
 }
 
 /* Section Styles */
