@@ -146,6 +146,10 @@ nav ul li a:hover::after {
     padding: 15px;
     border-radius: 10px;
     margin-top: 160px; /* Increased margin-top to move text down 10 spaces (100px) */
+    max-width: 100%; /* Ensure the hero text box is no wider than the mobile screen */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .hero h2 {
@@ -163,7 +167,8 @@ nav ul li a:hover::after {
     text-shadow: 0 0 5px #FFF; /* Match text shadow */
     margin-bottom: 10px; /* Reduced margin to minimize empty space */
     display: inline-block;
-    white-space: nowrap; /* Ensure the CA and address stay on the same line */
+    white-space: normal; /* Allow the text to wrap within the box */
+    word-wrap: break-word; /* Break long words to fit within the screen */
 }
 
 #contract-address {
@@ -271,6 +276,9 @@ section a:hover::after {
     text-shadow: 0 0 5px #FFFFFF;
 }
 
+/Here's the continuation and final adjustments:
+
+```css
 /* Green Text for NEON GREEN AURA and #NGR */
 .green-text {
     color: #00FF00;
@@ -287,9 +295,6 @@ section a:hover::after {
     content: "•";
     display: inline-block;
     margin-right: 5px; /* Reduced margin */
-    color: #00FFHere is the continuation of the CSS with the final adjustments to position the price module above the navigation links and below the title on mobile:
-
-```css
     color: #00FF00;
     text-shadow: 0 0 10px #00FF00;
 }
@@ -443,9 +448,8 @@ footer {
 
     /* Move the terminal (price module) below the title and above the links */
     #terminal {
-        order: 1; /* Position the terminal immediately after the title-logo container */
-        margin-top: 10px; /* Add space above the terminal */
-        margin-bottom: 20px; /* Add space below the terminal */
+        order: -1; /* Move the terminal above the navigation links */
+        margin: 10px 0; /* Add space around the terminal */
         margin-right: 0; /* Center the terminal */
         text-align: center; /* Center the text inside the terminal */
     }
@@ -457,7 +461,6 @@ footer {
         justify-content: center; /* Center the links */
         font-size: 1.0em; /* Greatly reduce font size for navigation links */
         margin-top: 20px; /* Add space above the links */
-        order: 2; /* Position the links below the terminal */
     }
 
     nav ul li {
@@ -479,6 +482,7 @@ footer {
     .hero p {
         font-size: 1em; /* Adjust font size slightly for smaller screens */
         white-space: normal; /* Allow text to wrap within the box */
+        word-wrap: break-word; /* Break long words to fit within the screen */
         margin: 10px 0; /* Adjust margins */
     }
 
