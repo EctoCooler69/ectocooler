@@ -235,11 +235,14 @@
     contractAddress.addEventListener('click', () => {
         navigator.clipboard.writeText(contractAddress.textContent)
             .then(() => {
-                copiedNotification.classList.add('show');
-                copiedNotification.classList.remove('hidden'); // Ensure the notification is visible
+                contractAddress.classList.add('hidden'); // Hide the contract address
+                copiedNotification.classList.add('show'); // Show the "Copied!" message
+                copiedNotification.classList.remove('hidden'); // Ensure "Copied!" message is visible
+
                 setTimeout(() => {
-                    copiedNotification.classList.remove('show');
-                    copiedNotification.classList.add('hidden'); // Hide the notification after 2 seconds
+                    copiedNotification.classList.remove('show'); // Hide "Copied!" message
+                    copiedNotification.classList.add('hidden');
+                    contractAddress.classList.remove('hidden'); // Show the contract address again
                 }, 2000);
             })
             .catch(err => {
