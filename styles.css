@@ -427,22 +427,22 @@ footer {
     }
 
     #site-title {
-        font-size: 1.8em; /* Slightly reduce the font size for mobile */
+        font-size: 2.8em; /* Slightly increase the font size for the title */
         margin-left: 0; /* Center the title */
     }
 
     #nav-logo {
+        height: 10em; /* Slightly increase the logo size */
         margin-right: 0; /* Center the logo */
         margin-bottom: 10px; /* Add space below the logo */
-        height: 7em; /* Adjust the size for mobile */
     }
 
     /* Adjust navigation links */
     nav ul {
         flex-direction: column; /* Stack the links vertically */
-        gap: 10px; /* Space out the links */
+        gap: 8px; /* Space out the links */
         justify-content: center; /* Center the links */
-        font-size: 1.5em; /* Increase font size slightly for touch targets */
+        font-size: 1.0em; /* Greatly reduce font size for navigation links */
         margin-top: 20px; /* Add space above the links */
     }
 
@@ -461,15 +461,15 @@ footer {
     @media (max-width: 480px) {
         /* Smaller screen optimizations */
         #site-title {
-            font-size: 1.5em;
+            font-size: 2.2em; /* Adjust font size slightly for smaller screens */
         }
 
         #nav-logo {
-            height: 5em; /* Further reduce logo size */
+            height: 8em; /* Adjust logo size for smaller screens */
         }
 
         nav ul {
-            font-size: 1.3em; /* Adjust font size for smaller screens */
+            font-size: 0.9em; /* Further reduce font size for smaller screens */
         }
 
         #terminal {
