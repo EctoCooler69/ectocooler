@@ -7,6 +7,7 @@ body, html {
     background-color: #000;
     color: #00FF00;
     cursor: url('custom-cursor.png'), auto; /* Set custom cursor */
+    text-align: center; /* Ensure all text is centered by default */
 }
 
 /* Header and Navigation Styles */
@@ -150,6 +151,7 @@ nav ul li a:hover::after {
 /* Section Styles */
 section {
     padding: 30px 20px; /* Reduced padding from 60px to 30px */
+    text-align: center; /* Ensure all section text is centered */
 }
 
 #tech-section {
