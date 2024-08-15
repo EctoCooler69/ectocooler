@@ -189,8 +189,14 @@ nav ul li a:hover::after {
     font-size: 1em;
     margin-left: 10px;
     text-shadow: 0 0 10px #00FF00;
-    position: relative;
-    top: -10px; /* Adjust to position it next to the CA: */
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: inline;
 }
 
 /* Section Styles */
