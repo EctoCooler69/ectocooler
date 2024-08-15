@@ -176,7 +176,8 @@ nav ul li a:hover::after {
     cursor: pointer;
     color: #FFFFFF;
     transition: color 0.3s ease;
-    display: inline; /* Ensure it's inline so "Copied!" replaces it on the same line */
+    display: inline; /* Ensure the contract address is inline */
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 #contract-address:hover {
@@ -188,9 +189,11 @@ nav ul li a:hover::after {
     display: none; /* Hidden by default */
     color: #00FF00;
     font-size: 1em;
-    margin-left: 10px;
+    margin-left: 5px; /* Adjust margin to match spacing */
     text-shadow: 0 0 10px #00FF00;
-    display: inline; /* Ensure it's inline so it appears on the same line as the address */
+    display: inline; /* Ensure it appears on the same line */
+    white-space: nowrap; /* Prevent wrapping */
+    vertical-align: middle; /* Align vertically with the contract address */
 }
 
 .hidden {
