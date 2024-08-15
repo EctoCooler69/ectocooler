@@ -137,15 +137,16 @@ nav ul li a:hover::after {
 .hero h2 {
     font-family: 'Press Start 2P', cursive;
     color: #00FF00;
-    font-size: 2.5em;
+    font-size: 2em; /* Match font size */
     text-shadow: 0 0 20px #00FF00;
     margin: 0;
 }
 
 .hero p {
-    color: #FFF;
+    font-family: 'Press Start 2P', cursive; /* Match font style */
     font-size: 1.2em;
-    text-shadow: 0 0 10px #FFF;
+    color: #FFF;
+    text-shadow: 0 0 5px #FFF; /* Match text shadow */
 }
 
 /* Section Styles */
@@ -164,15 +165,17 @@ section {
 
 section h2 {
     font-family: 'Press Start 2P', cursive;
+    font-size: 2em; /* Match font size */
     color: #00FF00;
     text-shadow: 0 0 10px #00FF00;
     margin-bottom: 30px;
 }
 
 section p {
-    color: #FFF;
+    font-family: 'Press Start 2P', cursive; /* Match font style */
     font-size: 1.2em;
-    text-shadow: 0 0 10px #FFF;
+    color: #FFF;
+    text-shadow: 0 0 5px #FFF; /* Match text shadow */
 }
 
 section a {
