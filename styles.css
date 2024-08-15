@@ -197,6 +197,28 @@ section a:hover::after {
     width: 100%;
 }
 
+/* Hashtags and Catchphrases Section */
+#hashtags-section {
+    padding: 30px 20px;
+    text-align: center;
+    color: #00FF00;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+#hashtags-section h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#hashtags-section p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFFFFF;
+}
+
 /* Meme Gallery Styles */
 .gallery-grid {
     display: grid;
