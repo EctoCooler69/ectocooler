@@ -228,20 +228,25 @@
             // Fetch prices on initial load
             fetchPrices();
 
-            // Contract address copy functionality
-            const contractAddress = document.getElementById('contract-address');
-            const copiedNotification = document.getElementById('copied-notification');
+           // Contract address copy functionality
+    const contractAddress = document.getElementById('contract-address');
+    const copiedNotification = document.getElementById('copied-notification');
 
-            contractAddress.addEventListener('click', () => {
-                navigator.clipboard.writeText(contractAddress.textContent)
-                    .then(() => {
-                        copiedNotification.classList.add('show');
-                        setTimeout(() => {
-                            copiedNotification.classList.remove('show');
-                        }, 2000);
-                    });
+    contractAddress.addEventListener('click', () => {
+        navigator.clipboard.writeText(contractAddress.textContent)
+            .then(() => {
+                copiedNotification.classList.add('show');
+                copiedNotification.classList.remove('hidden'); // Ensure the notification is visible
+                setTimeout(() => {
+                    copiedNotification.classList.remove('show');
+                    copiedNotification.classList.add('hidden'); // Hide the notification after 2 seconds
+                }, 2000);
+            })
+            .catch(err => {
+                console.error('Could not copy text: ', err);
             });
-        });
+    });
+});
     </script>
 </body>
 </html>
