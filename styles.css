@@ -186,12 +186,11 @@ nav ul li a:hover::after {
 }
 
 #copied-notification {
-    display: none; /* Hidden by default */
     color: #00FF00;
     font-size: 1em;
     margin-left: 5px; /* Adjust margin to match spacing */
     text-shadow: 0 0 10px #00FF00;
-    display: inline; /* Ensure it appears on the same line */
+    display: none; /* Hidden by default */
     white-space: nowrap; /* Prevent wrapping */
     vertical-align: middle; /* Align vertically with the contract address */
 }
