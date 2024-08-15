@@ -276,15 +276,15 @@ section a:hover::after {
     text-shadow: 0 0 5px #FFFFFF;
 }
 
-/Here's the continuation and final adjustments:
-
-```css
 /* Green Text for NEON GREEN AURA and #NGR */
 .green-text {
     color: #00FF00;
     text-shadow: 0 0 10px #00FF00;
 }
 
+/* Strikethrough effect forHere's the continuation and completion of the updated CSS, including the mobile adjustments to shrink the hero section and shift the background image:
+
+```css
 /* Strikethrough effect for the word "cum" */
 .strikethrough {
     text-decoration: line-through;
@@ -468,6 +468,11 @@ footer {
     }
 
     /* Hero section adjustments for mobile */
+    .hero {
+        height: calc(70vh - 40px); /* Shrink the height of the hero section */
+        background-position: left 10px center; /* Shift the background image to the left */
+    }
+
     .hero-content {
         max-width: 100%; /* Ensure the hero text box is no wider than the mobile screen */
         margin: 20px; /* Add some margin to avoid touching the edges */
@@ -505,6 +510,10 @@ footer {
             font-size: 8px; /* Smaller text in terminal */
             margin-top: 5px; /* Adjust space above the terminal for very small screens */
             margin-bottom: 15px; /* Adjust space below the terminal for very small screens */
+        }
+
+        .hero {
+            height: calc(60vh - 40px); /* Further shrink the height of the hero section for very small screens */
         }
 
         .hero-content {
