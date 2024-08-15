@@ -229,7 +229,6 @@
             fetchPrices();
 
            // Contract address copy functionality
-    document.addEventListener("DOMContentLoaded", function() {
     const contractAddress = document.getElementById('contract-address');
     const copiedNotification = document.getElementById('copied-notification');
 
@@ -237,10 +236,12 @@
         navigator.clipboard.writeText(contractAddress.textContent)
             .then(() => {
                 contractAddress.classList.add('hidden'); // Hide the contract address
-                copiedNotification.classList.remove('hidden'); // Show the "Copied!" message
+                copiedNotification.classList.add('show'); // Show the "Copied!" message
+                copiedNotification.classList.remove('hidden'); // Ensure "Copied!" message is visible
 
                 setTimeout(() => {
-                    copiedNotification.classList.add('hidden'); // Hide "Copied!" message
+                    copiedNotification.classList.remove('show'); // Hide "Copied!" message
+                    copiedNotification.classList.add('hidden');
                     contractAddress.classList.remove('hidden'); // Show the contract address again
                 }, 2000);
             })
