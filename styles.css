@@ -132,20 +132,20 @@ nav ul li a:hover::after {
     background-image: url('ectomeme3.gif');
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 60px); /* Adjusted height */
+    height: calc(100vh - 40px); /* Slightly increased height */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    padding-top: 40px; /* Adjusted padding at the top */
-    padding-bottom: 10px; /* Reduced padding at the bottom */
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 
 .hero-content {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 15px;
     border-radius: 10px;
-    margin-top: 60px; /* Reduced margin to move content up */
+    margin-top: 60px;
 }
 
 .hero h2 {
