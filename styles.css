@@ -161,6 +161,31 @@ nav ul li a:hover::after {
     font-size: 1.2em;
     color: #FFF;
     text-shadow: 0 0 5px #FFF; /* Match text shadow */
+    margin-bottom: 10px; /* Reduced margin to minimize empty space */
+    display: inline-block;
+    white-space: nowrap; /* Ensure the CA and address stay on the same line */
+}
+
+#contract-address {
+    margin-left: 5px; /* Reduced the spacing between "CA:" and the address */
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+#contract-address:hover {
+    color: #00FF00;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+#copied-notification {
+    display: none;
+    color: #00FF00;
+    font-size: 1em;
+    margin-left: 10px;
+    text-shadow: 0 0 10px #00FF00;
+    position: relative;
+    top: -10px; /* Adjust to position it next to the CA: */
 }
 
 /* Section Styles */
