@@ -132,7 +132,7 @@ nav ul li a:hover::after {
     background-image: url('ectomeme3.gif');
     background-size: cover;
     background-position: center;
-    height: calc(100vh + 20px);
+    height: calc(100vh - 50px); /* Reduced height by 50px */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -145,7 +145,7 @@ nav ul li a:hover::after {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-    margin-top: 150px; /* Move hero text down by 15 spaces (150px) total */
+    margin-top: 100px; /* Adjusted margin to move content up */
 }
 
 .hero h2 {
